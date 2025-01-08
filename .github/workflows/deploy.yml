@@ -10,20 +10,24 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
+#     defaults:
+#       run:
+#         working-directory: ./Poke-Stats
+
     steps:
       # Step 1: Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Step 2: Set up Node.js environment
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16' # Use the Node.js version compatible with your project
+          node-version: '23.6.0' # Use the Node.js version compatible with your project
 
-     #  # Step 3: Install dependencies
-     #  - name: Install dependencies
-     #    run: npm install
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
 
       # Step 4: Build the project with secrets
       - name: Build project
