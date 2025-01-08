@@ -1,11 +1,9 @@
-// Import the functions you need from the SDKs you need
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-// import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
-
-
+// Import the functions you need from Firebase SDK
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js";
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyD3dTNtWMPSGh8X8DeaduD3qyQhGl_U6jY",
   authDomain: "poke-stats-b8ae1.firebaseapp.com",
@@ -17,9 +15,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
-const auth = firebase.getAuth(app);
-const db = firebase.firestore();
-// const analytics = firebase.getAnalytics(app);
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);  // Get Firebase Authentication
+const db = getFirestore(app);  // Get Firestore
 
-// export { auth };
+export { auth, db };

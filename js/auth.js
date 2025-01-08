@@ -1,4 +1,7 @@
-// auth.js
+import { auth, db } from "./firebase.js";
+import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
+import { addDoc, collection, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js";
+
 
 const loginForm = document.getElementById('login-form');
 const emailInput = document.getElementById('email');
@@ -16,7 +19,7 @@ loginForm.addEventListener('submit', async (event) => {
     const password = passwordInput.value;
     
     try {
-        await firebase.auth().signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(auth, email, password);  // Use the correct method from Firebase
         loginSection.style.display = 'none';
         adminPanel.style.display = 'block';
     } catch (error) {
@@ -27,7 +30,7 @@ loginForm.addEventListener('submit', async (event) => {
 
 // Handle Logout
 logoutButton.addEventListener('click', () => {
-    firebase.auth().signOut().then(() => {
+    signOut(auth).then(() => {  // Use the correct method from Firebase
         loginSection.style.display = 'block';
         adminPanel.style.display = 'none';
     });
@@ -35,16 +38,15 @@ logoutButton.addEventListener('click', () => {
 
 // Handle Database Update (you can adjust this action to your needs)
 updateDatabaseButton.addEventListener('click', async () => {
-    // Example: Add a document to your Firestore collection
-    const docRef = await db.collection('updates').add({
+    const docRef = await addDoc(collection(db, "updates"), {
         update: 'Database updated via admin command',
-        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        timestamp: serverTimestamp()  // Use the correct method from Firebase
     });
     alert('Database updated!');
 });
 
 // Monitor Authentication State
-firebase.auth().onAuthStateChanged((user) => {
+onAuthStateChanged(auth, (user) => {  // Use the correct method from Firebase
     if (user) {
         loginSection.style.display = 'none';
         adminPanel.style.display = 'block';
