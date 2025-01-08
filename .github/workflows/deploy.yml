@@ -21,9 +21,9 @@ jobs:
         with:
           node-version: '16' # Use the Node.js version compatible with your project
 
-      # Step 3: Install dependencies
-      - name: Install dependencies
-        run: npm install
+     #  # Step 3: Install dependencies
+     #  - name: Install dependencies
+     #    run: npm install
 
       # Step 4: Build the project with secrets
       - name: Build project
