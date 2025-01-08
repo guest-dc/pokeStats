@@ -13,7 +13,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     alert("Logged in successfully!");
 
     // Check if the user is an admin (e.g., based on a hardcoded admin email)
-    if (email === "admin@example.com") {
+    if (email === "davisdevice@gmail.com") {
       document.getElementById("admin-button").style.display = "block";
     }
   } catch (error) {
