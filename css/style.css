@@ -24,7 +24,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
 }
 
 .logo {
@@ -40,7 +39,7 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 60px;
 }
 
 .nav-link {
@@ -54,13 +53,19 @@ body {
   color: rgb(36, 99, 235);
 }
 
+#navbar .nav-link {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .login-button {
   background-color: rgb(36, 99, 235);
   color: white;
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 20px;
+  font-weight: bold;
   text-align: center;
   transition: background-color 0.3s ease;
 }
@@ -69,7 +74,7 @@ body {
   background-color: rgb(30, 85, 200);
 }
 
-#features {
+.feature {
   padding: 20px;
 }
 
@@ -78,6 +83,8 @@ body {
   text-align: center;
   position: fixed;
   bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -89,11 +96,14 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-  .nav-links {
+#footer .nav-links {
+  color: blue;
+}
+
+@media (max-width: 990px) {
+  #navbar .nav-links {
     display: none;
   }
 }
