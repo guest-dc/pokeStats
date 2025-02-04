@@ -45,9 +45,9 @@ main {
 }
 
 .nav-links {
-  flex-grow: 1;  /* Allows it to take available space */
+  flex-grow: 1;
   display: flex;
-  justify-content: center; /* Center links within their div */
+  justify-content: center;
   gap: 60px;
 }
 
@@ -74,7 +74,6 @@ main {
   font-size: 30px;
   cursor: pointer;
   color: #475569;
-  margin-right: 10px;
 }
 
 .menu-dropdown {
