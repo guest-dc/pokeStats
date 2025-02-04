@@ -38,7 +38,9 @@ body {
 }
 
 .nav-links {
+  flex-grow: 1;  /* Allows it to take available space */
   display: flex;
+  justify-content: center; /* Center links within their div */
   gap: 60px;
 }
 
@@ -58,20 +60,36 @@ body {
   font-weight: bold;
 }
 
-.login-button {
-  background-color: rgb(36, 99, 235);
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  transition: background-color 0.3s ease;
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
 }
 
-.login-button:hover {
-  background-color: rgb(30, 85, 200);
+.menu-dropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.14);
+  padding: 10px;
+}
+
+.menu-dropdown .nav-link {
+  padding: 10px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu-dropdown .nav-link:hover {
+  background-color: #eee;
 }
 
 .feature {
@@ -102,8 +120,12 @@ body {
   color: blue;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 920px) {
   #navbar .nav-links {
     display: none;
+  }
+
+  .menu-button {
+    display: block;
   }
 }
