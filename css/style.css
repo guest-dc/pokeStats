@@ -118,7 +118,8 @@ body {
 }
 
 #footer .nav-links {
-  color: blue;
+  /* color: blue; */
+  text-decoration: underline;
 }
 
 @media (max-width: 920px) {
