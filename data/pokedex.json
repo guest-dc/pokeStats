@@ -1,41 +1,28 @@
 {
-  "pokedex": {
-
-    "1": {
-      "forms": [
-        {
-          "id": "BULBASAUR",
+     "1": {
+          "nameID": "BULBASAUR",
           "name": "Bulbasaur",
-          "type": ["grass", "poison"],
+          "type": ["Grass","Poison"],
           "stats": { "attack": 118, "defense": 111, "hp": 128 },
           "maxCP": 1260,
           "moves": {
-            "fast": ["Tackle", "Vine Whip"],
-            "charged": ["Razor Leaf", "SolarBeam"]
+               "fast": [
+                    "Tackle",
+                    "Vine Whip"
+               ],
+               "charged": [
+                    "Razor Leaf",
+                    "SolarBeam"
+               ]
           },
-          "released": true,
-          "shiny": false
-        },
-        {
-          "id": "SHADOW_BULBASAUR",
-          "name": "Shadow Bulbasaur",
-          "type": ["grass", "poison"],
-          "stats": { "attack": 118, "defense": 111, "hp": 128 },
-          "maxCP": 1260,
-          "moves": {
-            "fast": ["Tackle", "Vine Whip"],
-            "charged": ["Razor Leaf", "SolarBeam"]
-          },
-          "released": true,
-          "shiny": false
-        }
-
-
-
-
-
-
-      ]
-    }
-  }
+          "isReleased": true,
+          "isShiny": false,
+          "isShadow": true,
+          "image": "...",
+          "forms": [
+               {
+                    
+               }
+          ]
+     }
 }

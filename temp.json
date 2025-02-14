@@ -1,0 +1,3219 @@
+{
+    "1": {
+        "name": "Bulbasaur",
+        "nameID": "BULBASAUR",
+        "type": [
+            "Grass",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 118,
+            "defense": 111,
+            "hp": 128
+        },
+        "maxCP": 1260,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0001.png",
+        "forms": []
+    },
+    "2": {
+        "name": "Ivysaur",
+        "nameID": "IVYSAUR",
+        "type": [
+            "Grass",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 151,
+            "defense": 143,
+            "hp": 155
+        },
+        "maxCP": 1921,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0002.png",
+        "forms": []
+    },
+    "3": {
+        "name": "Venusaur",
+        "nameID": "VENUSAUR",
+        "type": [
+            "Grass",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 198,
+            "defense": 189,
+            "hp": 190
+        },
+        "maxCP": 3075,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": true,
+        "image": "./images/sprites/gen1/0003.png",
+        "forms": []
+    },
+    "4": {
+        "name": "Charmander",
+        "nameID": "CHARMANDER",
+        "type": [
+            "Fire"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 116,
+            "defense": 93,
+            "hp": 118
+        },
+        "maxCP": 1108,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0004.png",
+        "forms": []
+    },
+    "5": {
+        "name": "Charmeleon",
+        "nameID": "CHARMELEON",
+        "type": [
+            "Fire"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 158,
+            "defense": 126,
+            "hp": 151
+        },
+        "maxCP": 1868,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0005.png",
+        "forms": []
+    },
+    "6": {
+        "name": "Charizard",
+        "nameID": "CHARIZARD",
+        "type": [
+            "Fire",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 223,
+            "defense": 173,
+            "hp": 186
+        },
+        "maxCP": 3266,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": true,
+        "image": "./images/sprites/gen1/0006.png",
+        "forms": []
+    },
+    "7": {
+        "name": "Squirtle",
+        "nameID": "SQUIRTLE",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 94,
+            "defense": 121,
+            "hp": 127
+        },
+        "maxCP": 1069,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0007.png",
+        "forms": []
+    },
+    "8": {
+        "name": "Wartortle",
+        "nameID": "WARTORTLE",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 126,
+            "defense": 155,
+            "hp": 153
+        },
+        "maxCP": 1682,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0008.png",
+        "forms": []
+    },
+    "9": {
+        "name": "Blastoise",
+        "nameID": "BLASTOISE",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 171,
+            "defense": 207,
+            "hp": 188
+        },
+        "maxCP": 2788,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": true,
+        "image": "./images/sprites/gen1/0009.png",
+        "forms": []
+    },
+    "10": {
+        "name": "Caterpie",
+        "nameID": "CATERPIE",
+        "type": [
+            "Bug"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 55,
+            "defense": 55,
+            "hp": 128
+        },
+        "maxCP": 494,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0010.png",
+        "forms": []
+    },
+    "11": {
+        "name": "Metapod",
+        "nameID": "METAPOD",
+        "type": [
+            "Bug"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 45,
+            "defense": 80,
+            "hp": 137
+        },
+        "maxCP": 509,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0011.png",
+        "forms": []
+    },
+    "12": {
+        "name": "Butterfree",
+        "nameID": "BUTTERFREE",
+        "type": [
+            "Bug",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 167,
+            "defense": 137,
+            "hp": 155
+        },
+        "maxCP": 2065,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0012.png",
+        "forms": []
+    },
+    "13": {
+        "name": "Weedle",
+        "nameID": "WEEDLE",
+        "type": [
+            "Bug",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 63,
+            "defense": 50,
+            "hp": 120
+        },
+        "maxCP": 515,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0013.png",
+        "forms": []
+    },
+    "14": {
+        "name": "Kakuna",
+        "nameID": "KAKUNA",
+        "type": [
+            "Bug",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 46,
+            "defense": 75,
+            "hp": 128
+        },
+        "maxCP": 488,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0014.png",
+        "forms": []
+    },
+    "15": {
+        "name": "Beedrill",
+        "nameID": "BEEDRILL",
+        "type": [
+            "Bug",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 169,
+            "defense": 130,
+            "hp": 163
+        },
+        "maxCP": 2087,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": true,
+        "image": "./images/sprites/gen1/0015.png",
+        "forms": []
+    },
+    "16": {
+        "name": "Pidgey",
+        "nameID": "PIDGEY",
+        "type": [
+            "Normal",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 85,
+            "defense": 73,
+            "hp": 120
+        },
+        "maxCP": 769,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0016.png",
+        "forms": []
+    },
+    "17": {
+        "name": "Pidgeotto",
+        "nameID": "PIDGEOTTO",
+        "type": [
+            "Normal",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 117,
+            "defense": 105,
+            "hp": 160
+        },
+        "maxCP": 1350,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0017.png",
+        "forms": []
+    },
+    "18": {
+        "name": "Pidgeot",
+        "nameID": "PIDGEOT",
+        "type": [
+            "Normal",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 166,
+            "defense": 154,
+            "hp": 195
+        },
+        "maxCP": 2407,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": true,
+        "image": "./images/sprites/gen1/0018.png",
+        "forms": []
+    },
+    "19": {
+        "name": "Rattata",
+        "nameID": "RATTATA",
+        "type": [
+            "Normal"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 103,
+            "defense": 70,
+            "hp": 102
+        },
+        "maxCP": 830,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0019.png",
+        "forms": []
+    },
+    "20": {
+        "name": "Raticate",
+        "nameID": "RATICATE",
+        "type": [
+            "Normal"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 161,
+            "defense": 139,
+            "hp": 146
+        },
+        "maxCP": 1956,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0020.png",
+        "forms": []
+    },
+    "21": {
+        "name": "Spearow",
+        "nameID": "SPEAROW",
+        "type": [
+            "Normal",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 112,
+            "defense": 60,
+            "hp": 120
+        },
+        "maxCP": 902,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0021.png",
+        "forms": []
+    },
+    "22": {
+        "name": "Fearow",
+        "nameID": "FEAROW",
+        "type": [
+            "Normal",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 182,
+            "defense": 133,
+            "hp": 163
+        },
+        "maxCP": 2257,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0022.png",
+        "forms": []
+    },
+    "23": {
+        "name": "Ekans",
+        "nameID": "EKANS",
+        "type": [
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 110,
+            "defense": 97,
+            "hp": 111
+        },
+        "maxCP": 1048,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0023.png",
+        "forms": []
+    },
+    "24": {
+        "name": "Arbok",
+        "nameID": "ARBOK",
+        "type": [
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 167,
+            "defense": 153,
+            "hp": 155
+        },
+        "maxCP": 2171,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0024.png",
+        "forms": []
+    },
+    "25": {
+        "name": "Pikachu",
+        "nameID": "PIKACHU",
+        "type": [
+            "Electric"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 112,
+            "defense": 96,
+            "hp": 111
+        },
+        "maxCP": 1060,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0025.png",
+        "forms": []
+    },
+    "26": {
+        "name": "Raichu",
+        "nameID": "RAICHU",
+        "type": [
+            "Electric"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 193,
+            "defense": 151,
+            "hp": 155
+        },
+        "maxCP": 2467,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0026.png",
+        "forms": []
+    },
+    "27": {
+        "name": "Sandshrew",
+        "nameID": "SANDSHREW",
+        "type": [
+            "Ground"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 126,
+            "defense": 120,
+            "hp": 137
+        },
+        "maxCP": 1426,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0027.png",
+        "forms": []
+    },
+    "28": {
+        "name": "Sandslash",
+        "nameID": "SANDSLASH",
+        "type": [
+            "Ground"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 182,
+            "defense": 175,
+            "hp": 181
+        },
+        "maxCP": 2684,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0028.png",
+        "forms": []
+    },
+    "29": {
+        "name": "Nidoran\u2640",
+        "nameID": "NIDORAN\u2640",
+        "type": [
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 86,
+            "defense": 89,
+            "hp": 146
+        },
+        "maxCP": 922,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0029.png",
+        "forms": []
+    },
+    "30": {
+        "name": "Nidorina",
+        "nameID": "NIDORINA",
+        "type": [
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 117,
+            "defense": 120,
+            "hp": 172
+        },
+        "maxCP": 1480,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0030.png",
+        "forms": []
+    },
+    "31": {
+        "name": "Nidoqueen",
+        "nameID": "NIDOQUEEN",
+        "type": [
+            "Poison",
+            "Ground"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 180,
+            "defense": 173,
+            "hp": 207
+        },
+        "maxCP": 2812,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0031.png",
+        "forms": []
+    },
+    "32": {
+        "name": "Nidoran\u2642",
+        "nameID": "NIDORAN\u2642",
+        "type": [
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 105,
+            "defense": 76,
+            "hp": 130
+        },
+        "maxCP": 973,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0032.png",
+        "forms": []
+    },
+    "33": {
+        "name": "Nidorino",
+        "nameID": "NIDORINO",
+        "type": [
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 137,
+            "defense": 111,
+            "hp": 156
+        },
+        "maxCP": 1575,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0033.png",
+        "forms": []
+    },
+    "34": {
+        "name": "Nidoking",
+        "nameID": "NIDOKING",
+        "type": [
+            "Poison",
+            "Ground"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 204,
+            "defense": 156,
+            "hp": 191
+        },
+        "maxCP": 2902,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0034.png",
+        "forms": []
+    },
+    "35": {
+        "name": "Clefairy",
+        "nameID": "CLEFAIRY",
+        "type": [
+            "Fairy"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 107,
+            "defense": 108,
+            "hp": 172
+        },
+        "maxCP": 1306,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0035.png",
+        "forms": []
+    },
+    "36": {
+        "name": "Clefable",
+        "nameID": "CLEFABLE",
+        "type": [
+            "Fairy"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 178,
+            "defense": 162,
+            "hp": 216
+        },
+        "maxCP": 2755,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0036.png",
+        "forms": []
+    },
+    "37": {
+        "name": "Vulpix",
+        "nameID": "VULPIX",
+        "type": [
+            "Fire"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 96,
+            "defense": 109,
+            "hp": 116
+        },
+        "maxCP": 998,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0037.png",
+        "forms": []
+    },
+    "38": {
+        "name": "Ninetales",
+        "nameID": "NINETALES",
+        "type": [
+            "Fire"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 169,
+            "defense": 190,
+            "hp": 177
+        },
+        "maxCP": 2577,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0038.png",
+        "forms": []
+    },
+    "39": {
+        "name": "Jigglypuff",
+        "nameID": "JIGGLYPUFF",
+        "type": [
+            "Normal",
+            "Fairy"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 80,
+            "defense": 41,
+            "hp": 251
+        },
+        "maxCP": 818,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0039.png",
+        "forms": []
+    },
+    "40": {
+        "name": "Wigglytuff",
+        "nameID": "WIGGLYTUFF",
+        "type": [
+            "Normal",
+            "Fairy"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 156,
+            "defense": 90,
+            "hp": 295
+        },
+        "maxCP": 2178,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0040.png",
+        "forms": []
+    },
+    "41": {
+        "name": "Zubat",
+        "nameID": "ZUBAT",
+        "type": [
+            "Poison",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 83,
+            "defense": 73,
+            "hp": 120
+        },
+        "maxCP": 754,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0041.png",
+        "forms": []
+    },
+    "42": {
+        "name": "Golbat",
+        "nameID": "GOLBAT",
+        "type": [
+            "Poison",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 161,
+            "defense": 150,
+            "hp": 181
+        },
+        "maxCP": 2234,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0042.png",
+        "forms": []
+    },
+    "43": {
+        "name": "Oddish",
+        "nameID": "ODDISH",
+        "type": [
+            "Grass",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 131,
+            "defense": 112,
+            "hp": 128
+        },
+        "maxCP": 1389,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0043.png",
+        "forms": []
+    },
+    "44": {
+        "name": "Gloom",
+        "nameID": "GLOOM",
+        "type": [
+            "Grass",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 153,
+            "defense": 136,
+            "hp": 155
+        },
+        "maxCP": 1900,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0044.png",
+        "forms": []
+    },
+    "45": {
+        "name": "Vileplume",
+        "nameID": "VILEPLUME",
+        "type": [
+            "Grass",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 202,
+            "defense": 167,
+            "hp": 181
+        },
+        "maxCP": 2893,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0045.png",
+        "forms": []
+    },
+    "46": {
+        "name": "Paras",
+        "nameID": "PARAS",
+        "type": [
+            "Bug",
+            "Grass"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 121,
+            "defense": 99,
+            "hp": 111
+        },
+        "maxCP": 1150,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0046.png",
+        "forms": []
+    },
+    "47": {
+        "name": "Parasect",
+        "nameID": "PARASECT",
+        "type": [
+            "Bug",
+            "Grass"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 165,
+            "defense": 146,
+            "hp": 155
+        },
+        "maxCP": 2102,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0047.png",
+        "forms": []
+    },
+    "48": {
+        "name": "Venonat",
+        "nameID": "VENONAT",
+        "type": [
+            "Bug",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 100,
+            "defense": 100,
+            "hp": 155
+        },
+        "maxCP": 1135,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0048.png",
+        "forms": []
+    },
+    "49": {
+        "name": "Venomoth",
+        "nameID": "VENOMOTH",
+        "type": [
+            "Bug",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 179,
+            "defense": 143,
+            "hp": 172
+        },
+        "maxCP": 2354,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0049.png",
+        "forms": []
+    },
+    "50": {
+        "name": "Diglett",
+        "nameID": "DIGLETT",
+        "type": [
+            "Ground"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 109,
+            "defense": 78,
+            "hp": 67
+        },
+        "maxCP": 764,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0050.png",
+        "forms": []
+    },
+    "51": {
+        "name": "Dugtrio",
+        "nameID": "DUGTRIO",
+        "type": [
+            "Ground"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 167,
+            "defense": 134,
+            "hp": 111
+        },
+        "maxCP": 1760,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0051.png",
+        "forms": []
+    },
+    "52": {
+        "name": "Meowth",
+        "nameID": "MEOWTH",
+        "type": [
+            "Normal"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 92,
+            "defense": 78,
+            "hp": 120
+        },
+        "maxCP": 846,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0052.png",
+        "forms": []
+    },
+    "53": {
+        "name": "Persian",
+        "nameID": "PERSIAN",
+        "type": [
+            "Normal"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 150,
+            "defense": 136,
+            "hp": 163
+        },
+        "maxCP": 1910,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0053.png",
+        "forms": []
+    },
+    "54": {
+        "name": "Psyduck",
+        "nameID": "PSYDUCK",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 122,
+            "defense": 95,
+            "hp": 137
+        },
+        "maxCP": 1250,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0054.png",
+        "forms": []
+    },
+    "55": {
+        "name": "Golduck",
+        "nameID": "GOLDUCK",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 191,
+            "defense": 162,
+            "hp": 190
+        },
+        "maxCP": 2770,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0055.png",
+        "forms": []
+    },
+    "56": {
+        "name": "Mankey",
+        "nameID": "MANKEY",
+        "type": [
+            "Fighting"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 148,
+            "defense": 82,
+            "hp": 120
+        },
+        "maxCP": 1317,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0056.png",
+        "forms": []
+    },
+    "57": {
+        "name": "Primeape",
+        "nameID": "PRIMEAPE",
+        "type": [
+            "Fighting"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 207,
+            "defense": 138,
+            "hp": 163
+        },
+        "maxCP": 2586,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0057.png",
+        "forms": []
+    },
+    "58": {
+        "name": "Growlithe",
+        "nameID": "GROWLITHE",
+        "type": [
+            "Fire"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 136,
+            "defense": 93,
+            "hp": 146
+        },
+        "maxCP": 1405,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0058.png",
+        "forms": []
+    },
+    "59": {
+        "name": "Arcanine",
+        "nameID": "ARCANINE",
+        "type": [
+            "Fire"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 227,
+            "defense": 166,
+            "hp": 207
+        },
+        "maxCP": 3425,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0059.png",
+        "forms": []
+    },
+    "60": {
+        "name": "Poliwag",
+        "nameID": "POLIWAG",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 101,
+            "defense": 82,
+            "hp": 120
+        },
+        "maxCP": 937,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0060.png",
+        "forms": []
+    },
+    "61": {
+        "name": "Poliwhirl",
+        "nameID": "POLIWHIRL",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 130,
+            "defense": 123,
+            "hp": 163
+        },
+        "maxCP": 1604,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0061.png",
+        "forms": []
+    },
+    "62": {
+        "name": "Poliwrath",
+        "nameID": "POLIWRATH",
+        "type": [
+            "Water",
+            "Fighting"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 182,
+            "defense": 184,
+            "hp": 207
+        },
+        "maxCP": 2923,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0062.png",
+        "forms": []
+    },
+    "63": {
+        "name": "Abra",
+        "nameID": "ABRA",
+        "type": [
+            "Psychic"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 195,
+            "defense": 82,
+            "hp": 93
+        },
+        "maxCP": 1517,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0063.png",
+        "forms": []
+    },
+    "64": {
+        "name": "Kadabra",
+        "nameID": "KADABRA",
+        "type": [
+            "Psychic"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 232,
+            "defense": 117,
+            "hp": 120
+        },
+        "maxCP": 2328,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0064.png",
+        "forms": []
+    },
+    "65": {
+        "name": "Alakazam",
+        "nameID": "ALAKAZAM",
+        "type": [
+            "Psychic"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 271,
+            "defense": 167,
+            "hp": 146
+        },
+        "maxCP": 3456,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": true,
+        "image": "./images/sprites/gen1/0065.png",
+        "forms": []
+    },
+    "66": {
+        "name": "Machop",
+        "nameID": "MACHOP",
+        "type": [
+            "Fighting"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 137,
+            "defense": 82,
+            "hp": 172
+        },
+        "maxCP": 1445,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0066.png",
+        "forms": []
+    },
+    "67": {
+        "name": "Machoke",
+        "nameID": "MACHOKE",
+        "type": [
+            "Fighting"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 177,
+            "defense": 125,
+            "hp": 190
+        },
+        "maxCP": 2296,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0067.png",
+        "forms": []
+    },
+    "68": {
+        "name": "Machamp",
+        "nameID": "MACHAMP",
+        "type": [
+            "Fighting"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 234,
+            "defense": 159,
+            "hp": 207
+        },
+        "maxCP": 3455,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0068.png",
+        "forms": []
+    },
+    "69": {
+        "name": "Bellsprout",
+        "nameID": "BELLSPROUT",
+        "type": [
+            "Grass",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 139,
+            "defense": 61,
+            "hp": 137
+        },
+        "maxCP": 1168,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0069.png",
+        "forms": []
+    },
+    "70": {
+        "name": "Weepinbell",
+        "nameID": "WEEPINBELL",
+        "type": [
+            "Grass",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 172,
+            "defense": 92,
+            "hp": 163
+        },
+        "maxCP": 1822,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0070.png",
+        "forms": []
+    },
+    "71": {
+        "name": "Victreebel",
+        "nameID": "VICTREEBEL",
+        "type": [
+            "Grass",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 207,
+            "defense": 135,
+            "hp": 190
+        },
+        "maxCP": 2748,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0071.png",
+        "forms": []
+    },
+    "72": {
+        "name": "Tentacool",
+        "nameID": "TENTACOOL",
+        "type": [
+            "Water",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 97,
+            "defense": 149,
+            "hp": 120
+        },
+        "maxCP": 1176,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0072.png",
+        "forms": []
+    },
+    "73": {
+        "name": "Tentacruel",
+        "nameID": "TENTACRUEL",
+        "type": [
+            "Water",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 166,
+            "defense": 209,
+            "hp": 190
+        },
+        "maxCP": 2738,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0073.png",
+        "forms": []
+    },
+    "74": {
+        "name": "Geodude",
+        "nameID": "GEODUDE",
+        "type": [
+            "Rock",
+            "Ground"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 132,
+            "defense": 132,
+            "hp": 120
+        },
+        "maxCP": 1462,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0074.png",
+        "forms": []
+    },
+    "75": {
+        "name": "Graveler",
+        "nameID": "GRAVELER",
+        "type": [
+            "Rock",
+            "Ground"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 164,
+            "defense": 164,
+            "hp": 146
+        },
+        "maxCP": 2145,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0075.png",
+        "forms": []
+    },
+    "76": {
+        "name": "Golem",
+        "nameID": "GOLEM",
+        "type": [
+            "Rock",
+            "Ground"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 211,
+            "defense": 198,
+            "hp": 190
+        },
+        "maxCP": 3334,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0076.png",
+        "forms": []
+    },
+    "77": {
+        "name": "Ponyta",
+        "nameID": "PONYTA",
+        "type": [
+            "Fire"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 170,
+            "defense": 127,
+            "hp": 137
+        },
+        "maxCP": 1919,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0077.png",
+        "forms": []
+    },
+    "78": {
+        "name": "Rapidash",
+        "nameID": "RAPIDASH",
+        "type": [
+            "Fire"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 207,
+            "defense": 162,
+            "hp": 163
+        },
+        "maxCP": 2782,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0078.png",
+        "forms": []
+    },
+    "79": {
+        "name": "Slowpoke",
+        "nameID": "SLOWPOKE",
+        "type": [
+            "Water",
+            "Psychic"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 109,
+            "defense": 98,
+            "hp": 207
+        },
+        "maxCP": 1386,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0079.png",
+        "forms": []
+    },
+    "80": {
+        "name": "Slowbro",
+        "nameID": "SLOWBRO",
+        "type": [
+            "Water",
+            "Psychic"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 177,
+            "defense": 180,
+            "hp": 216
+        },
+        "maxCP": 2877,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": true,
+        "image": "./images/sprites/gen1/0080.png",
+        "forms": []
+    },
+    "81": {
+        "name": "Magnemite",
+        "nameID": "MAGNEMITE",
+        "type": [
+            "Electric",
+            "Steel"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 165,
+            "defense": 121,
+            "hp": 93
+        },
+        "maxCP": 1540,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0081.png",
+        "forms": []
+    },
+    "82": {
+        "name": "Magneton",
+        "nameID": "MAGNETON",
+        "type": [
+            "Electric",
+            "Steel"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 223,
+            "defense": 169,
+            "hp": 137
+        },
+        "maxCP": 2810,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0082.png",
+        "forms": []
+    },
+    "83": {
+        "name": "Farfetch'd",
+        "nameID": "FARFETCH'D",
+        "type": [
+            "Normal",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 124,
+            "defense": 115,
+            "hp": 141
+        },
+        "maxCP": 1397,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0083.png",
+        "forms": []
+    },
+    "84": {
+        "name": "Doduo",
+        "nameID": "DODUO",
+        "type": [
+            "Normal",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 158,
+            "defense": 83,
+            "hp": 111
+        },
+        "maxCP": 1357,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0084.png",
+        "forms": []
+    },
+    "85": {
+        "name": "Dodrio",
+        "nameID": "DODRIO",
+        "type": [
+            "Normal",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 218,
+            "defense": 140,
+            "hp": 155
+        },
+        "maxCP": 2670,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0085.png",
+        "forms": []
+    },
+    "86": {
+        "name": "Seel",
+        "nameID": "SEEL",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 85,
+            "defense": 121,
+            "hp": 163
+        },
+        "maxCP": 1098,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0086.png",
+        "forms": []
+    },
+    "87": {
+        "name": "Dewgong",
+        "nameID": "DEWGONG",
+        "type": [
+            "Water",
+            "Ice"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 139,
+            "defense": 177,
+            "hp": 207
+        },
+        "maxCP": 2245,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0087.png",
+        "forms": []
+    },
+    "88": {
+        "name": "Grimer",
+        "nameID": "GRIMER",
+        "type": [
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 135,
+            "defense": 90,
+            "hp": 190
+        },
+        "maxCP": 1553,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0088.png",
+        "forms": []
+    },
+    "89": {
+        "name": "Muk",
+        "nameID": "MUK",
+        "type": [
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 190,
+            "defense": 172,
+            "hp": 233
+        },
+        "maxCP": 3117,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0089.png",
+        "forms": []
+    },
+    "90": {
+        "name": "Shellder",
+        "nameID": "SHELLDER",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 116,
+            "defense": 134,
+            "hp": 102
+        },
+        "maxCP": 1221,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0090.png",
+        "forms": []
+    },
+    "91": {
+        "name": "Cloyster",
+        "nameID": "CLOYSTER",
+        "type": [
+            "Water",
+            "Ice"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 186,
+            "defense": 256,
+            "hp": 137
+        },
+        "maxCP": 2880,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0091.png",
+        "forms": []
+    },
+    "92": {
+        "name": "Gastly",
+        "nameID": "GASTLY",
+        "type": [
+            "Ghost",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 186,
+            "defense": 67,
+            "hp": 102
+        },
+        "maxCP": 1390,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0092.png",
+        "forms": []
+    },
+    "93": {
+        "name": "Haunter",
+        "nameID": "HAUNTER",
+        "type": [
+            "Ghost",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 223,
+            "defense": 107,
+            "hp": 128
+        },
+        "maxCP": 2219,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0093.png",
+        "forms": []
+    },
+    "94": {
+        "name": "Gengar",
+        "nameID": "GENGAR",
+        "type": [
+            "Ghost",
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 261,
+            "defense": 149,
+            "hp": 155
+        },
+        "maxCP": 3254,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": true,
+        "image": "./images/sprites/gen1/0094.png",
+        "forms": []
+    },
+    "95": {
+        "name": "Onix",
+        "nameID": "ONIX",
+        "type": [
+            "Rock",
+            "Ground"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 85,
+            "defense": 232,
+            "hp": 111
+        },
+        "maxCP": 1245,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0095.png",
+        "forms": []
+    },
+    "96": {
+        "name": "Drowzee",
+        "nameID": "DROWZEE",
+        "type": [
+            "Psychic"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 89,
+            "defense": 136,
+            "hp": 155
+        },
+        "maxCP": 1176,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0096.png",
+        "forms": []
+    },
+    "97": {
+        "name": "Hypno",
+        "nameID": "HYPNO",
+        "type": [
+            "Psychic"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 144,
+            "defense": 193,
+            "hp": 198
+        },
+        "maxCP": 2363,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0097.png",
+        "forms": []
+    },
+    "98": {
+        "name": "Krabby",
+        "nameID": "KRABBY",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 181,
+            "defense": 124,
+            "hp": 102
+        },
+        "maxCP": 1764,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0098.png",
+        "forms": []
+    },
+    "99": {
+        "name": "Kingler",
+        "nameID": "KINGLER",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 240,
+            "defense": 181,
+            "hp": 146
+        },
+        "maxCP": 3198,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0099.png",
+        "forms": []
+    },
+    "100": {
+        "name": "Voltorb",
+        "nameID": "VOLTORB",
+        "type": [
+            "Electric"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 109,
+            "defense": 111,
+            "hp": 120
+        },
+        "maxCP": 1141,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0100.png",
+        "forms": []
+    },
+    "101": {
+        "name": "Electrode",
+        "nameID": "ELECTRODE",
+        "type": [
+            "Electric"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 173,
+            "defense": 173,
+            "hp": 155
+        },
+        "maxCP": 2373,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0101.png",
+        "forms": []
+    },
+    "102": {
+        "name": "Exeggcute",
+        "nameID": "EXEGGCUTE",
+        "type": [
+            "Grass",
+            "Psychic"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 107,
+            "defense": 125,
+            "hp": 155
+        },
+        "maxCP": 1328,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0102.png",
+        "forms": []
+    },
+    "103": {
+        "name": "Exeggutor",
+        "nameID": "EXEGGUTOR",
+        "type": [
+            "Grass",
+            "Psychic"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 233,
+            "defense": 149,
+            "hp": 216
+        },
+        "maxCP": 3408,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0103.png",
+        "forms": []
+    },
+    "104": {
+        "name": "Cubone",
+        "nameID": "CUBONE",
+        "type": [
+            "Ground"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 90,
+            "defense": 144,
+            "hp": 137
+        },
+        "maxCP": 1152,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0104.png",
+        "forms": []
+    },
+    "105": {
+        "name": "Marowak",
+        "nameID": "MAROWAK",
+        "type": [
+            "Ground"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 144,
+            "defense": 186,
+            "hp": 155
+        },
+        "maxCP": 2075,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0105.png",
+        "forms": []
+    },
+    "106": {
+        "name": "Hitmonlee",
+        "nameID": "HITMONLEE",
+        "type": [
+            "Fighting"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 224,
+            "defense": 181,
+            "hp": 137
+        },
+        "maxCP": 2912,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0106.png",
+        "forms": []
+    },
+    "107": {
+        "name": "Hitmonchan",
+        "nameID": "HITMONCHAN",
+        "type": [
+            "Fighting"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 193,
+            "defense": 197,
+            "hp": 137
+        },
+        "maxCP": 2636,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0107.png",
+        "forms": []
+    },
+    "108": {
+        "name": "Lickitung",
+        "nameID": "LICKITUNG",
+        "type": [
+            "Normal"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 108,
+            "defense": 137,
+            "hp": 207
+        },
+        "maxCP": 1595,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0108.png",
+        "forms": []
+    },
+    "109": {
+        "name": "Koffing",
+        "nameID": "KOFFING",
+        "type": [
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 119,
+            "defense": 141,
+            "hp": 120
+        },
+        "maxCP": 1373,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0109.png",
+        "forms": []
+    },
+    "110": {
+        "name": "Weezing",
+        "nameID": "WEEZING",
+        "type": [
+            "Poison"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 174,
+            "defense": 197,
+            "hp": 163
+        },
+        "maxCP": 2592,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0110.png",
+        "forms": []
+    },
+    "111": {
+        "name": "Rhyhorn",
+        "nameID": "RHYHORN",
+        "type": [
+            "Ground",
+            "Rock"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 140,
+            "defense": 127,
+            "hp": 190
+        },
+        "maxCP": 1867,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0111.png",
+        "forms": []
+    },
+    "112": {
+        "name": "Rhydon",
+        "nameID": "RHYDON",
+        "type": [
+            "Ground",
+            "Rock"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 222,
+            "defense": 171,
+            "hp": 233
+        },
+        "maxCP": 3594,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0112.png",
+        "forms": []
+    },
+    "113": {
+        "name": "Chansey",
+        "nameID": "CHANSEY",
+        "type": [
+            "Normal"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 60,
+            "defense": 128,
+            "hp": 487
+        },
+        "maxCP": 1418,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0113.png",
+        "forms": []
+    },
+    "114": {
+        "name": "Tangela",
+        "nameID": "TANGELA",
+        "type": [
+            "Grass"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 183,
+            "defense": 169,
+            "hp": 163
+        },
+        "maxCP": 2530,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0114.png",
+        "forms": []
+    },
+    "115": {
+        "name": "Kangaskhan",
+        "nameID": "KANGASKHAN",
+        "type": [
+            "Normal"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 181,
+            "defense": 165,
+            "hp": 233
+        },
+        "maxCP": 2924,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": true,
+        "image": "./images/sprites/gen1/0115.png",
+        "forms": []
+    },
+    "116": {
+        "name": "Horsea",
+        "nameID": "HORSEA",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 129,
+            "defense": 103,
+            "hp": 102
+        },
+        "maxCP": 1194,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0116.png",
+        "forms": []
+    },
+    "117": {
+        "name": "Seadra",
+        "nameID": "SEADRA",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 187,
+            "defense": 156,
+            "hp": 146
+        },
+        "maxCP": 2366,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0117.png",
+        "forms": []
+    },
+    "118": {
+        "name": "Goldeen",
+        "nameID": "GOLDEEN",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 123,
+            "defense": 110,
+            "hp": 128
+        },
+        "maxCP": 1302,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0118.png",
+        "forms": []
+    },
+    "119": {
+        "name": "Seaking",
+        "nameID": "SEAKING",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 175,
+            "defense": 147,
+            "hp": 190
+        },
+        "maxCP": 2444,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0119.png",
+        "forms": []
+    },
+    "120": {
+        "name": "Staryu",
+        "nameID": "STARYU",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 137,
+            "defense": 112,
+            "hp": 102
+        },
+        "maxCP": 1308,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0120.png",
+        "forms": []
+    },
+    "121": {
+        "name": "Starmie",
+        "nameID": "STARMIE",
+        "type": [
+            "Water",
+            "Psychic"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 210,
+            "defense": 184,
+            "hp": 155
+        },
+        "maxCP": 2922,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0121.png",
+        "forms": []
+    },
+    "122": {
+        "name": "Mr. Mime",
+        "nameID": "MR._MIME",
+        "type": [
+            "Psychic",
+            "Fairy"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 192,
+            "defense": 205,
+            "hp": 120
+        },
+        "maxCP": 2518,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0122.png",
+        "forms": []
+    },
+    "123": {
+        "name": "Scyther",
+        "nameID": "SCYTHER",
+        "type": [
+            "Bug",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 218,
+            "defense": 170,
+            "hp": 172
+        },
+        "maxCP": 3060,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0123.png",
+        "forms": []
+    },
+    "124": {
+        "name": "Jynx",
+        "nameID": "JYNX",
+        "type": [
+            "Ice",
+            "Psychic"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 223,
+            "defense": 151,
+            "hp": 163
+        },
+        "maxCP": 2888,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0124.png",
+        "forms": []
+    },
+    "125": {
+        "name": "Electabuzz",
+        "nameID": "ELECTABUZZ",
+        "type": [
+            "Electric"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 198,
+            "defense": 158,
+            "hp": 163
+        },
+        "maxCP": 2639,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0125.png",
+        "forms": []
+    },
+    "126": {
+        "name": "Magmar",
+        "nameID": "MAGMAR",
+        "type": [
+            "Fire"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 206,
+            "defense": 154,
+            "hp": 163
+        },
+        "maxCP": 2706,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0126.png",
+        "forms": []
+    },
+    "127": {
+        "name": "Pinsir",
+        "nameID": "PINSIR",
+        "type": [
+            "Bug"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 238,
+            "defense": 182,
+            "hp": 163
+        },
+        "maxCP": 3345,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": true,
+        "image": "./images/sprites/gen1/0127.png",
+        "forms": []
+    },
+    "128": {
+        "name": "Tauros",
+        "nameID": "TAUROS",
+        "type": [
+            "Normal"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 198,
+            "defense": 183,
+            "hp": 181
+        },
+        "maxCP": 2962,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0128.png",
+        "forms": []
+    },
+    "129": {
+        "name": "Magikarp",
+        "nameID": "MAGIKARP",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 29,
+            "defense": 85,
+            "hp": 85
+        },
+        "maxCP": 310,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0129.png",
+        "forms": []
+    },
+    "130": {
+        "name": "Gyarados",
+        "nameID": "GYARADOS",
+        "type": [
+            "Water",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 237,
+            "defense": 186,
+            "hp": 216
+        },
+        "maxCP": 3834,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": true,
+        "image": "./images/sprites/gen1/0130.png",
+        "forms": []
+    },
+    "131": {
+        "name": "Lapras",
+        "nameID": "LAPRAS",
+        "type": [
+            "Water",
+            "Ice"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 165,
+            "defense": 174,
+            "hp": 277
+        },
+        "maxCP": 2985,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0131.png",
+        "forms": []
+    },
+    "132": {
+        "name": "Ditto",
+        "nameID": "DITTO",
+        "type": [
+            "Normal"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 91,
+            "defense": 91,
+            "hp": 134
+        },
+        "maxCP": 940,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0132.png",
+        "forms": []
+    },
+    "133": {
+        "name": "Eevee",
+        "nameID": "EEVEE",
+        "type": [
+            "Normal"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 104,
+            "defense": 114,
+            "hp": 146
+        },
+        "maxCP": 1210,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0133.png",
+        "forms": []
+    },
+    "134": {
+        "name": "Vaporeon",
+        "nameID": "VAPOREON",
+        "type": [
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 205,
+            "defense": 161,
+            "hp": 277
+        },
+        "maxCP": 3521,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0134.png",
+        "forms": []
+    },
+    "135": {
+        "name": "Jolteon",
+        "nameID": "JOLTEON",
+        "type": [
+            "Electric"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 232,
+            "defense": 182,
+            "hp": 163
+        },
+        "maxCP": 3265,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0135.png",
+        "forms": []
+    },
+    "136": {
+        "name": "Flareon",
+        "nameID": "FLAREON",
+        "type": [
+            "Fire"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 246,
+            "defense": 179,
+            "hp": 163
+        },
+        "maxCP": 3424,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0136.png",
+        "forms": []
+    },
+    "137": {
+        "name": "Porygon",
+        "nameID": "PORYGON",
+        "type": [
+            "Normal"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 153,
+            "defense": 136,
+            "hp": 163
+        },
+        "maxCP": 1944,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0137.png",
+        "forms": []
+    },
+    "138": {
+        "name": "Omanyte",
+        "nameID": "OMANYTE",
+        "type": [
+            "Rock",
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 155,
+            "defense": 153,
+            "hp": 111
+        },
+        "maxCP": 1746,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0138.png",
+        "forms": []
+    },
+    "139": {
+        "name": "Omastar",
+        "nameID": "OMASTAR",
+        "type": [
+            "Rock",
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 207,
+            "defense": 201,
+            "hp": 172
+        },
+        "maxCP": 3150,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0139.png",
+        "forms": []
+    },
+    "140": {
+        "name": "Kabuto",
+        "nameID": "KABUTO",
+        "type": [
+            "Rock",
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 148,
+            "defense": 140,
+            "hp": 102
+        },
+        "maxCP": 1549,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0140.png",
+        "forms": []
+    },
+    "141": {
+        "name": "Kabutops",
+        "nameID": "KABUTOPS",
+        "type": [
+            "Rock",
+            "Water"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 220,
+            "defense": 186,
+            "hp": 155
+        },
+        "maxCP": 3067,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0141.png",
+        "forms": []
+    },
+    "142": {
+        "name": "Aerodactyl",
+        "nameID": "AERODACTYL",
+        "type": [
+            "Rock",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 221,
+            "defense": 159,
+            "hp": 190
+        },
+        "maxCP": 3147,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": true,
+        "image": "./images/sprites/gen1/0142.png",
+        "forms": []
+    },
+    "143": {
+        "name": "Snorlax",
+        "nameID": "SNORLAX",
+        "type": [
+            "Normal"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 190,
+            "defense": 169,
+            "hp": 330
+        },
+        "maxCP": 3647,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0143.png",
+        "forms": []
+    },
+    "144": {
+        "name": "Articuno",
+        "nameID": "ARTICUNO",
+        "type": [
+            "Ice",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 192,
+            "defense": 236,
+            "hp": 207
+        },
+        "maxCP": 3450,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0144.png",
+        "forms": []
+    },
+    "145": {
+        "name": "Zapdos",
+        "nameID": "ZAPDOS",
+        "type": [
+            "Electric",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 253,
+            "defense": 185,
+            "hp": 207
+        },
+        "maxCP": 3987,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0145.png",
+        "forms": []
+    },
+    "146": {
+        "name": "Moltres",
+        "nameID": "MOLTRES",
+        "type": [
+            "Fire",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 251,
+            "defense": 181,
+            "hp": 207
+        },
+        "maxCP": 3917,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0146.png",
+        "forms": []
+    },
+    "147": {
+        "name": "Dratini",
+        "nameID": "DRATINI",
+        "type": [
+            "Dragon"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 119,
+            "defense": 91,
+            "hp": 121
+        },
+        "maxCP": 1136,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0147.png",
+        "forms": []
+    },
+    "148": {
+        "name": "Dragonair",
+        "nameID": "DRAGONAIR",
+        "type": [
+            "Dragon"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 163,
+            "defense": 135,
+            "hp": 156
+        },
+        "maxCP": 2012,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0148.png",
+        "forms": []
+    },
+    "149": {
+        "name": "Dragonite",
+        "nameID": "DRAGONITE",
+        "type": [
+            "Dragon",
+            "Flying"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 263,
+            "defense": 198,
+            "hp": 209
+        },
+        "maxCP": 4287,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0149.png",
+        "forms": []
+    },
+    "150": {
+        "name": "Mewtwo",
+        "nameID": "MEWTWO",
+        "type": [
+            "Psychic"
+        ],
+        "generation": 1,
+        "stats": {
+            "attack": 300,
+            "defense": 182,
+            "hp": 214
+        },
+        "maxCP": 4724,
+        "moves": {},
+        "isReleased": false,
+        "isShiny": false,
+        "isShadow": false,
+        "hasMega": false,
+        "image": "./images/sprites/gen1/0150.png",
+        "forms": []
+    }
+}
