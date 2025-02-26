@@ -5,11 +5,24 @@ import re
 FILENAME = "./data/releasedMons.csv"
 RELEASED_URL = "https://pokemongo.fandom.com/wiki/List_of_Pok%C3%A9mon"
 
-tagIds = {
+tagIDs = {
     "Alolan": "alola",
     "Galarian": "galar",
     "Paldean": "paldea",
     "Hisuian": "hisui"
+}
+
+formIDs = {
+     "combat breed": "combat",
+     "blaze breed": "blaze",
+     "aqua breed": "aqua",
+     "galarian zen": "galar-zen",
+     "single strike": "single-strike",
+     "rapid strike": "rapid-strike",
+     "pom-pom" : "pompom",
+     "dusk mane": "duskmane",
+     "dawn wings": "dawnwings",
+     "low key": "lowkey"
 }
 
 skippedVariants = [
@@ -40,17 +53,16 @@ with open(FILENAME, mode='w', newline='') as file:
                          header = re.search(r'>(.*?)<', line).group(1).strip().split()[0]
                          if header in ["Mega", "Gigantamax"] : tag = "skip"
                          elif header in ["Other"]            : tag = "other"
-                         else                                : tag = tagIds[header]
+                         else                                : tag = tagIDs[header]
                     
                     # If pokemon reached...
                     elif 'class="pogo-list-item' in line:
 
                          if tag == "skip": continue
 
-                         match = re.search(r'<div class="pogo-list-item-number" title="[^"]*">(.*?)</div>', line)
-
                          isReleased = 'class="pogo-list-item greyed-out' not in line
-                         number = re.sub(r'\D', '', match.group(1)).lstrip("0")
+                         rawNumber = re.search(r'<div class="pogo-list-item-number" title="[^"]*">(.*?)</div>', line)
+                         number = re.sub(r'\D', '', rawNumber.group(1)).lstrip("0")
                          entry = f"{number}"
 
                          # If under the varient header "Other" and varient is to be skipped...
@@ -59,14 +71,24 @@ with open(FILENAME, mode='w', newline='') as file:
 
                          # If under a regional tag...
                          elif tag != "":
-                              entry += f"-{tag}"
+                              if tag != "other":
+                                   entry += f"-{tag}"
+                              
+                              rawForm = re.search(r'<div class="pogo-list-item-form" [^>]*>(.*?)</div>', line)
+                              if rawForm:
+                                   form = rawForm.group(1).lower()
+                                   form = re.sub(r' (form|mode|forme|style|kyurem)+$', '', form)
 
-                         # implement the addition of forms to tags here
+                                   if form in formIDs: entry += f"-{formIDs[form]}"
+                                   else:               entry += f"-{form}"
 
                          writer.writerow([f"{entry}", isReleased])
                          
                          processed.append(entry)
-                         #print(f"processed {entry}")
+
+                         if entry == "151":
+                              writer.writerow([f"{entry}-armored", True])
+                              processed.append(f"{entry}-armored")
 
      except Exception as e:
           print("Error:", e)
