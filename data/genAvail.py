@@ -24,9 +24,9 @@ tagIDs = {
 }
 
 skippedVariants = [
-     "201", "327", "412", "413", "422", "423", "550", "585", "586", "649", "658",
-     "666", "669", "670", "671", "676", "681", "710", "711", "854", "855", "877",
-     "925", "931", "978", "982", "999", "1012", "1013"
+     "0201", "0327", "0412", "0413", "0422", "0423", "0550", "0585", "0586", "0649", "0658",
+     "0666", "0669", "0670", "0671", "0676", "0681", "7010", "0711", "0854", "0855", "0877",
+     "0925", "0931", "0978", "0982", "0999", "1012", "1013"
 ]
 
 # Initialized CSV file and generate released/unreleased pokemon
@@ -62,7 +62,7 @@ with open(FILENAME, mode='w', newline='') as file:
 
                          isReleased = 'class="pogo-list-item greyed-out' not in line
                          rawNumber = re.search(r'<div class="pogo-list-item-number" title="[^"]*">(.*?)</div>', line)
-                         number = re.sub(r'\D', '', rawNumber.group(1)).lstrip("0")
+                         number = re.sub(r'\D', '', rawNumber.group(1))
                          entry = f"{number}"
 
                          # If under the varient header "Other" and varient is to be skipped...
@@ -107,59 +107,59 @@ with open(FILENAME, mode='w', newline='') as file:
 
 variants = {
      #gen 1
-     "128-paldea": ["combat", "blaze", "aqua"],
+     "0128-paldea": ["combat", "blaze", "aqua"],
      "150": ["armored"],
 
      # gen 3
-     "351": ["sunny", "rainy", "snowy"],
-     "386": ["attack", "defense", "speed"],
+     "0351": ["sunny", "rainy", "snowy"],
+     "0386": ["attack", "defense", "speed"],
 
      # gen 4
-     "479": ["heat", "wash", "frost", "fan", "mow"],
-     "487": ["altered", "origin"],
-     "492": ["land", "sky"],
-     "493": ["fighting", "flying", "poison", "ground", "rock", "bug", "ghost", "steel", "fire",
+     "0479": ["heat", "wash", "frost", "fan", "mow"],
+     "0487": ["altered", "origin"],
+     "0492": ["land", "sky"],
+     "0493": ["fighting", "flying", "poison", "ground", "rock", "bug", "ghost", "steel", "fire",
              "water", "grass", "electric", "psychic", "ice", "dragon", "dark", "fairy"         ],
 
      # gen 5
-     "550": ["red-striped", "blue-striped", "white-striped"],
-     "555": ["zen"],
-     "555-galar": ["zen"],
-     "641": ["incarnate", "therian"],
-     "642": ["incarnate", "therian"],
-     "645": ["incarnate", "therian"],
-     "646": ["black", "white"],
-     "647": ["ordinary", "resolute"],
-     "648": ["aria", "pirouette"],
-     "649": [f"drive-{d}" for d in ["shock", "burn", "chill", "douse"]],
+     "0550": ["red-striped", "blue-striped", "white-striped"],
+     "0555": ["zen"],
+     "0555-galar": ["zen"],
+     "0641": ["incarnate", "therian"],
+     "0642": ["incarnate", "therian"],
+     "0645": ["incarnate", "therian"],
+     "0646": ["black", "white"],
+     "0647": ["ordinary", "resolute"],
+     "0648": ["aria", "pirouette"],
+     "0649": [f"drive-{d}" for d in ["shock", "burn", "chill", "douse"]],
 
      # gen 6
-     "678": ["male", "female"],
-     "681": ["shield", "blade"],
-     "710": ["small", "average", "large", "super"],
-     "711": ["small", "average", "large", "super"],
-     "716": ["neutral", "active"],
-     "718": ["10%", "50%", "complete"],
-     "720": ["confined", "unbound"],
+     "0678": ["male", "female"],
+     "0681": ["shield", "blade"],
+     "0710": ["small", "average", "large", "super"],
+     "0711": ["small", "average", "large", "super"],
+     "0716": ["neutral", "active"],
+     "0718": ["10%", "50%", "complete"],
+     "0720": ["confined", "unbound"],
 
      # gen 7
-     "746": ["school"],
-     "773": ["fighting", "flying", "poison", "ground", "rock", "bug", "ghost", "steel", "fire",
+     "0746": ["school"],
+     "0773": ["fighting", "flying", "poison", "ground", "rock", "bug", "ghost", "steel", "fire",
              "water", "grass", "electric", "psychic", "ice", "dragon", "dark", "fairy"         ],
-     "800": ["dusk mane", "dawn wings", "ultra"],
+     "0800": ["dusk mane", "dawn wings", "ultra"],
 
      # gen 8
-     "844": ["gulping", "gorging"],
-     "849": ["amped", "lowkey"],
-     "876": ["male", "female"],
-     "877": ["full belly", "hangry"],
-     "888": ["hero", "crowned"],
-     "889": ["hero", "crowned"],
-     "892": ["single strike", "rapid strike"],
-     "898": ["ice rider", "shadow rider"],
+     "0844": ["gulping", "gorging"],
+     "0849": ["amped", "lowkey"],
+     "0876": ["male", "female"],
+     "0877": ["full belly", "hangry"],
+     "0888": ["hero", "crowned"],
+     "0889": ["hero", "crowned"],
+     "0892": ["single strike", "rapid strike"],
+     "0898": ["ice rider", "shadow rider"],
 
      # gen 9
-     "999": ["chest", "roaming"],
+     "0999": ["chest", "roaming"],
      "1005": ["teal mask", "wellspring mask", "hearthflame mask", "cornerstone mask"],
 }
 
@@ -205,7 +205,7 @@ try:
                elif 'class="pogo-list-item' in line and 'class="pogo-list-item greyed-out' not in line:
 
                     rawNumber = re.search(r'<div class="pogo-list-item-number" title="[^"]*">(.*?)</div>', line)
-                    number = re.sub(r'\D', '', rawNumber.group(1)).lstrip("0")
+                    number = re.sub(r'\D', '', rawNumber.group(1))
                     entry = f"{number}-{tag}" if tag else number
 
                     # change shadow variable
