@@ -1,0 +1,47 @@
+
+.database-table {
+     border-collapse: collapse;
+     font-size: 0.9em;
+     min-width: 550px;
+     max-width: 550px;
+     border-radius: 5px 5px 0 0;
+     overflow: hidden;
+     box-shadow: 0 0 5px #475569;
+}
+
+.database-table thead tr {
+     background-color: #475569;
+     color: #ffffff;
+     text-align: left;
+}
+
+.database-table th,
+.database-table td {
+     padding: 5px 15px;
+     vertical-align: middle;
+}
+
+.database-table tbody tr {
+     font-weight: bold;
+}
+
+.database-table tbody tr:nth-of-type(even) {
+     background-color: #f3f3f3;
+}
+
+.database-table tbody tr:last-of-type {
+     border-bottom: 2px solid #475569;
+}
+
+img {
+     display: block;
+}
+
+.mega-icon {
+     width: 25%; height: auto; object-fit: contain;
+}
+
+.type-icons {
+     display: flex;
+     /* justify-content: center; */
+}

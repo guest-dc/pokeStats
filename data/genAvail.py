@@ -94,17 +94,6 @@ with open(FILENAME, mode='w', newline='') as file:
           print("Error:", e)
 
 
-
-# print("\nAll nonreleased mons:\n")
-# with open(FILENAME, newline="") as csvfile:
-#      reader = csv.reader(csvfile)
-
-#      # Iterate through each row
-#      for row in reader:
-#           if len(row) > 1 and row[1].strip() == "False":
-#                print(row[0])
-
-
 variants = {
      #gen 1
      "0128-paldea": ["combat", "blaze", "aqua"],
