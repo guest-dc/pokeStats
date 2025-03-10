@@ -32,7 +32,7 @@ skippedVariants = [
 # Initialized CSV file and generate released/unreleased pokemon
 with open(FILENAME, mode='w', newline='') as file:
      writer = csv.writer(file)
-     writer.writerow(["dexID", "isReleased", "hasShadow"])
+     writer.writerow(["pokeID", "dexID", "isReleased", "hasShadow"])
 
      try:
           with urllib.request.urlopen(RELEASED_URL) as response:
@@ -61,8 +61,22 @@ with open(FILENAME, mode='w', newline='') as file:
                          if tag == "skip": continue
 
                          isReleased = 'class="pogo-list-item greyed-out' not in line
+
+                         rawName = re.search(r'<div class="pogo-list-item-name" id="[^"]*"><a [^>]*>(.*?)</a></div>', line)
+                         rawName = rawName.group(1)
+
+                         if '♀' in rawName:
+                              rawName = rawName.strip('♀')
+                              rawName = rawName.upper() + "_FEMALE"
+                         elif '♂' in rawName:
+                              rawName = rawName.strip('♂')
+                              rawName = rawName.upper() + "_MALE"
+
+                         name = rawName.upper()
+
                          rawNumber = re.search(r'<div class="pogo-list-item-number" title="[^"]*">(.*?)</div>', line)
                          number = re.sub(r'\D', '', rawNumber.group(1))
+
                          entry = f"{number}"
 
                          # If under the varient header "Other" and varient is to be skipped...
@@ -73,21 +87,26 @@ with open(FILENAME, mode='w', newline='') as file:
                          elif tag != "":
                               if tag != "other":
                                    entry += f"-{tag}"
+                                   name += f"_{tag.upper()}"
                               
                               rawForm = re.search(r'<div class="pogo-list-item-form" [^>]*>(.*?)</div>', line)
                               if rawForm:
                                    form = rawForm.group(1).lower()
                                    form = re.sub(r' (form|mode|forme|style|kyurem)+$', '', form)
 
-                                   if form in tagIDs: entry += f"-{tagIDs[form]}"
-                                   else:               entry += f"-{form}"
+                                   if form in tagIDs:
+                                        entry += f"-{tagIDs[form]}"
+                                        name  += f"_{tagIDs[form].upper()}"
+                                   else:
+                                        entry += f"-{form}"
+                                        name  += f"_{form.upper()}"
 
-                         writer.writerow([f"{entry}", isReleased, False])
+                         writer.writerow([f"{name}", f"{entry}", isReleased, False])
                          
                          processed.append(entry)
 
-                         if entry == "150":
-                              writer.writerow([f"{entry}-armored", True, False])
+                         if entry == "0150":
+                              writer.writerow([f"{name}_ARMORED", f"{entry}-armored", True, False])
                               processed.append(f"{entry}-armored")
 
      except Exception as e:
@@ -162,8 +181,8 @@ def updateShadow(lookupID):
           lines = list(reader)
 
      for line in lines:
-          if line[0] == lookupID:
-               line[2] = True
+          if line[1] == lookupID:
+               line[3] = True
 
      with open(FILENAME, mode='w', newline='') as outfile:
           writer = csv.writer(outfile)
@@ -195,6 +214,7 @@ try:
 
                     rawNumber = re.search(r'<div class="pogo-list-item-number" title="[^"]*">(.*?)</div>', line)
                     number = re.sub(r'\D', '', rawNumber.group(1))
+                    
                     entry = f"{number}-{tag}" if tag else number
 
                     # change shadow variable
