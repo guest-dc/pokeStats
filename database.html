@@ -9,6 +9,8 @@
 
      <link rel="stylesheet" href="css/main_styles.css">
      <link rel="stylesheet" href="css/database_styles.css">
+
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>
 </head>
 
 <body>
@@ -42,22 +44,21 @@
 
      <center>
           <h1>Available Pokémon in Pokémon GO</h1>
+          <div class="table-container">
+               <table id="databaseTable">
+                    <thead>
+                         <tr>
+                              <th style="text-align: left;">Dex#</th>
+                              <th style="text-align: left;">Pokémon</th>
+                              <th>Type</th>
+                              <th>Mega?</th>
+                              <th>Shadow?</th>
+                         </tr>
+                    </thead>
 
-          <table class="database-table">
-               <thead>
-                    <tr>
-                         <th>Dex#</th>
-                         <th>Pokémon</th>
-                         <th>Type</th>
-                         <th>Mega</th>
-                         <th>Shadow</th>
-                    </tr>
-               </thead>
-
-               <tbody id="pokemon-table-body">
-                    <tr><td colspan="3">Loading...</td></tr>
-               </tbody>
-          </table>
+                    <tbody></tbody>
+               </table>
+          </div>
      </center>
 
 
@@ -71,6 +72,9 @@
           </div>
           <p>Davis Guest || Mercer University || 2025</p>
      </footer>
+
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
      <script src="/js/globals.js"></script>
      <script src="/js/database_scripts.js"></script>
