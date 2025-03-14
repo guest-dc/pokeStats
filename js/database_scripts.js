@@ -16,19 +16,19 @@ skippedVarients = [
 ]
 
 function getPokemonIcon(id, gen) {
-     return `<img src="/images/sprites/gen${gen}/${id}_icon.png" class="pokemon-icon" alt="${id}">`;
+     return `<img src="images/sprites/gen${gen}/${id}_icon.png" class="pokemon-icon" alt="${id}">`;
 }
 
 function getTypeIcon(typeName) {
-     return `<img src="/images/icons/types/${typeName.toLowerCase()}_icon.png" alt="${typeName}">`;
+     return `<img src="images/icons/types/${typeName.toLowerCase()}_icon.png" alt="${typeName}">`;
 }
 
 function getMegaIcon() {
-     return `<img src="/images/icons/mega_icon.png" class="mega-icon" alt="mega">`;
+     return `<img src="images/icons/mega_icon.png" class="mega-icon" alt="mega">`;
 }
 
 function getShadowIcon() {
-     return `<img src="/images/icons/shadow_icon.png" class="shadow-icon" alt="shadow">`;
+     return `<img src="images/icons/shadow_icon.png" class="shadow-icon" alt="shadow">`;
 }
 
 function createRow(pokemon) {
@@ -56,7 +56,7 @@ function createRow(pokemon) {
 
 function fetchDataAndRender() {
      return new Promise((resolve, reject) => {
-          fetch('/data/database.json')
+          fetch('data/database.json')
           .then(response => response.json())
           .then(data => {
                const tableBody = document.querySelector('#databaseTable tbody');
