@@ -1,42 +1,43 @@
 .table-container {
-     min-width: 900px;
-     max-width: 900px;
+  min-width: 900px;
+  max-width: 900px;
+  margin-bottom: 20px;
 }
 
 #databaseTable {
-     border-collapse: collapse;
-     font-size: 0.9em;
-     font-weight: bold;
-     border-radius: 5px 5px 0 0;
-     overflow: hidden;
-     box-shadow: 0 0 5px #475569;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 5px #475569;
 }
 
 #databaseTable thead {
-     background-color: #475569;
-     color: #ffffff;
+  background-color: #475569;
+  color: #ffffff;
 }
 
 #databaseTable tbody tr:nth-of-type(even) {
-     background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 #databaseTable tbody td img {
-     vertical-align: middle;
+  vertical-align: middle;
 }
 
 #type-icons img {
-     width: 100%;
+  width: 100%;
 }
 
 #mega-icon img {
-     width: 20%;
-     display: block;
-     margin: auto;
+  width: 20%;
+  display: block;
+  margin: auto;
 }
 
 #shadow-icon img {
-     width: 22%;
-     display: block;
-     margin: auto;
+  width: 22%;
+  display: block;
+  margin: auto;
 }
