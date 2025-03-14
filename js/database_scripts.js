@@ -56,10 +56,10 @@ function createRow(pokemon) {
 
 function fetchDataAndRender() {
      return new Promise((resolve, reject) => {
-          fetch('data/database.json')
+          fetch("data/database.json")
           .then(response => response.json())
           .then(data => {
-               const tableBody = document.querySelector('#databaseTable tbody');
+               const tableBody = document.querySelector("#databaseTable tbody");
                tableBody.innerHTML = '';     // Clear existing rows
 
                data = data.filter(pokemon => pokemon.isReleased);
