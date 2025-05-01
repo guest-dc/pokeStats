@@ -2,7 +2,7 @@
 const COL_SPAN = 5;
 
 skippedNormals = [
-     "Cherrim", "Giratina", "Shaymin", "Darmanitan", "Tornadus", "Thundurus", "Landorus", "Keldeo", "Meloetta", "Zygarde", "Hoopa", "Oricorio"
+     "Cherrim", "Giratina", "Shaymin", "Darmanitan", "Tornadus", "Thundurus", "Landorus", "Keldeo", "Meloetta", "Zygarde", "Hoopa", "Oricorio", "Lycanroc", "Wishiwashi"
 ]
 
 
@@ -65,7 +65,7 @@ function createRow(pokemon) {
      return row;
 }
 
-let toggleReleased = false;
+let toggleReleased = true;
 
 function fetchDataAndRender() {
      return new Promise((resolve, reject) => {

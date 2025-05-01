@@ -298671,7 +298671,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0745-midday"
             },
             "LYCANROC_MIDNIGHT": {
                 "id": "LYCANROC",
@@ -299697,7 +299700,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0746-solo"
             }
         },
         "evolutions": [],
@@ -306594,7 +306600,10 @@
         ],
         "hasMegaEvolution": false,
         "megaEvolutions": [],
-        "assetForms": []
+        "assetForms": [],
+        "isReleased": false,
+        "hasShadow": false,
+        "imgID": "0772"
     },
     {
         "id": "SILVALLY",

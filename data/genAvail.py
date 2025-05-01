@@ -40,6 +40,8 @@ specialAdds = {
      "0718": [{"nametag": "FIFTY_PERCENT", "entrytag": "50", "released": True, "shadow": False}],
      "0720": [{"nametag": "CONFINED", "entrytag": "confined", "released": True, "shadow": False}],
      "0741": [{"nametag": "BAILE", "entrytag": "baile", "released": True, "shadow": False}],
+     "0745": [{"nametag": "MIDDAY", "entrytag": "midday", "released": True, "shadow": False}],
+     "0746": [{"nametag": "SOLO", "entrytag": "solo", "released": True, "shadow": False}]
      #"": [{"nametag": "", "entrytag": "", "released": True, "shadow": False}]
 }
 
@@ -103,6 +105,8 @@ with open(FILENAME, mode='w', newline='') as file:
 
                          if name == "HO-OH":
                               name = "HO_OH"
+                         elif name == "TYPE: NULL":
+                              name = "TYPE_NULL"
 
                          rawNumber = re.search(r'<div class="pogo-list-item-number" title="[^"]*">(.*?)</div>', line)
                          number = re.sub(r'\D', '', rawNumber.group(1))
