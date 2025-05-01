@@ -181224,7 +181224,10 @@
                 "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_474_00.png",
                 "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_474_00_shiny.png"
             }
-        ]
+        ],
+        "isReleased": true,
+        "hasShadow": true,
+        "imgID": "0474"
     },
     {
         "id": "GALLADE",

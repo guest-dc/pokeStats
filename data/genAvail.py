@@ -100,6 +100,9 @@ with open(FILENAME, mode='w', newline='') as file:
                          elif "'d" in rawName:
                               rawName = rawName.strip("'d")
                               rawName = rawName.upper() + "D"
+                         elif "-Z" in rawName:
+                              rawName = rawName.strip("-Z")
+                              rawName = rawName.upper() + "_Z"
 
                          name = rawName.upper()
 

@@ -65,7 +65,7 @@ function createRow(pokemon) {
      return row;
 }
 
-let toggleReleased = true;
+let toggleReleased = false;
 
 function fetchDataAndRender() {
      return new Promise((resolve, reject) => {
