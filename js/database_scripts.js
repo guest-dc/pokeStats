@@ -1,11 +1,15 @@
 
 const COL_SPAN = 5;
 
+skippedNormals = [
+     "Cherrim"
+]
+
 
 skippedVarients = [
      "Pikachu", "Eevee",
-     "Espeon", "Umbreon", "Entei", "Raikou", "Suicune", "Lugia", "Ho-Oh",
-     "Latios", "Latias", "Burmy", "Wormadam", "Cherrim",
+     "Espeon", "Umbreon", "Unown", "Entei", "Raikou", "Suicune", "Lugia", "Ho-Oh",
+     "Latios", "Latias", "Burmy", "Wormadam", "Spinda",
      "Shellos", "Gastrodon",
      "Basculin", "Deerling", "Sawsbuck", "Frillish", "Jellicent",
      "Scatterbug", "Spewpa", "Vivillon", "Flabebe", "Floette", "Florges", "Furfrou",
@@ -16,7 +20,7 @@ skippedVarients = [
 ]
 
 function getPokemonIcon(id, gen) {
-     return `<img src="images/sprites/gen${gen}/${id}_icon.png" class="pokemon-icon" alt="${id}">`;
+     return `<img src="images/sprites/gen${gen}/${id}.png" class="pokemon-icon" alt="${id}">`;
 }
 
 function getTypeIcon(typeName) {
@@ -34,6 +38,9 @@ function getShadowIcon() {
 function createRow(pokemon) {
      let dexNr = pokemon.dexNr;
      let name = pokemon.names.English;
+
+     let id = pokemon.imgID;
+     let pokemonIcon = getPokemonIcon(id, pokemon.generation);
      
      let primaryType = pokemon.primaryType.names.English;
      let secondaryType = pokemon.secondaryType ? pokemon.secondaryType.names.English : "";
@@ -46,7 +53,7 @@ function createRow(pokemon) {
      let row = document.createElement("tr");
      row.innerHTML = `
           <td>${dexNr}</td>
-          <td>${name}</td>
+          <td>${pokemonIcon} ${name}</td>
           <td id="type-icons">${typeIcons}</td>
           <td id="mega-icon">${megaIcon}</td>
           <td id="shadow-icon">${shadowIcon}</td>
@@ -65,11 +72,13 @@ function fetchDataAndRender() {
                data = data.filter(pokemon => pokemon.isReleased);
 
                for (const pokeData in data) {
-                    
-                    // insert pokemon
+
                     const pokemon = data[pokeData];
                     const row = createRow(pokemon);
-                    tableBody.appendChild(row);
+                    
+                    if (!skippedNormals.includes(pokemon.names.English)) {
+                         tableBody.appendChild(row);
+                    }
 
                     // insert regionals and varients
                     if (pokemon.regionForms && !skippedVarients.includes(pokemon.names.English)) {
@@ -117,3 +126,11 @@ $(document).ready(function() {
      renderTable();
 
 });
+
+window.onload = function() {
+     const images = document.querySelectorAll('.pokemon-icon');
+     images.forEach(img => {
+         img.style.width = '50px';
+         img.style.height = '50px';
+     });
+ };

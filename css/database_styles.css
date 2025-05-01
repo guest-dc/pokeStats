@@ -30,6 +30,12 @@
   width: 100%;
 }
 
+.pokemon-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
 #mega-icon img {
   width: 20%;
   display: block;

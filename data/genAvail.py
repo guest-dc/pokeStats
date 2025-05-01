@@ -87,7 +87,12 @@ with open(FILENAME, mode='w', newline='') as file:
                          elif tag != "":
                               if tag != "other":
                                    entry += f"-{tag}"
-                                   name += f"_{tag.upper()}"
+                                   if tag == "galar":
+                                        name += "_GALARIAN"
+                                   elif tag == "hisui":
+                                        name += "_HISUIAN"
+                                   else:
+                                        name += f"_{tag.upper()}"
                               
                               rawForm = re.search(r'<div class="pogo-list-item-form" [^>]*>(.*?)</div>', line)
                               if rawForm:
@@ -97,6 +102,9 @@ with open(FILENAME, mode='w', newline='') as file:
                                    if form in tagIDs:
                                         entry += f"-{tagIDs[form]}"
                                         name  += f"_{tagIDs[form].upper()}"
+                                   if form == "sunshine":
+                                        entry += "-sunshine"
+                                        name += "_SUNNY"
                                    else:
                                         entry += f"-{form}"
                                         name  += f"_{form.upper()}"
@@ -106,8 +114,11 @@ with open(FILENAME, mode='w', newline='') as file:
                          processed.append(entry)
 
                          if entry == "0150":
-                              writer.writerow([f"{name}_ARMORED", f"{entry}-armored", True, False])
+                              writer.writerow([f"{name}_A", f"{entry}-armored", True, False])
                               processed.append(f"{entry}-armored")
+                         if entry == "0421":
+                              writer.writerow([f"{name}_OVERCAST", f"{entry}-overcast", True, False])
+                              processed.append(f"{entry}-overcast")
 
      except Exception as e:
           print("Error:", e)
