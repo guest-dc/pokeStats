@@ -11,10 +11,6 @@ tagIDs = {
      "Galarian": "galar",
      "Paldean": "paldea",
      "Hisuian": "hisui",
-     "combat breed": "combat",
-     "blaze breed": "blaze",
-     "aqua breed": "aqua",
-     "galarian zen": "galar-zen",
      "single strike": "single-strike",
      "rapid strike": "rapid-strike",
      "pom-pom" : "pompom",
@@ -28,6 +24,26 @@ skippedVariants = [
      "0666", "0669", "0670", "0671", "0676", "0681", "7010", "0711", "0854", "0855", "0877",
      "0925", "0931", "0978", "0982", "0999", "1012", "1013"
 ]
+
+specialAdds = {
+     "0150": [{"nametag": "A", "entrytag": "armored", "released": True, "shadow": False}],
+     "0421": [{"nametag": "OVERCAST", "entrytag": "overcast", "released": True, "shadow": False}],
+     "0487": [{"nametag": "ALTERED", "entrytag": "altered", "released": True, "shadow": False}],
+     "0492": [{"nametag": "LAND", "entrytag": "land", "released": True, "shadow": False}],
+     "0555": [{"nametag": "STANDARD", "entrytag": "standard", "released": True, "shadow": True}],
+     "0641": [{"nametag": "INCARNATE", "entrytag": "incarnate", "released": True, "shadow": False}],
+     "0642": [{"nametag": "INCARNATE", "entrytag": "incarnate", "released": True, "shadow": False}],
+     "0645": [{"nametag": "INCARNATE", "entrytag": "incarnate", "released": True, "shadow": False}],
+     "0647": [{"nametag": "ORDINARY", "entrytag": "ordinary", "released": True, "shadow": False}],
+     "0648": [{"nametag": "ARIA", "entrytag": "aria", "released": True, "shadow": False}],
+     "0678": [{"nametag": "FEMALE", "entrytag": "female", "released": True, "shadow": False}],
+     "0718": [{"nametag": "FIFTY_PERCENT", "entrytag": "50", "released": True, "shadow": False}],
+     "0720": [{"nametag": "CONFINED", "entrytag": "confined", "released": True, "shadow": False}],
+     "0741": [{"nametag": "BAILE", "entrytag": "baile", "released": True, "shadow": False}],
+     #"": [{"nametag": "", "entrytag": "", "released": True, "shadow": False}]
+}
+
+print("Writing released pokemon to CSV")
 
 # Initialized CSV file and generate released/unreleased pokemon
 with open(FILENAME, mode='w', newline='') as file:
@@ -71,8 +87,22 @@ with open(FILENAME, mode='w', newline='') as file:
                          elif '♂' in rawName:
                               rawName = rawName.strip('♂')
                               rawName = rawName.upper() + "_MALE"
+                         elif "Mr. " in rawName:
+                              rawName = rawName.strip("Mr.")
+                              rawName = rawName.strip(" ")
+                              rawName = "MR_" + rawName.upper()
+                         elif " Jr." in rawName:
+                              rawName = rawName.strip("Jr.")
+                              rawName = rawName.strip(" ")
+                              rawName = rawName.upper() + "_JR"
+                         elif "'d" in rawName:
+                              rawName = rawName.strip("'d")
+                              rawName = rawName.upper() + "D"
 
                          name = rawName.upper()
+
+                         if name == "HO-OH":
+                              name = "HO_OH"
 
                          rawNumber = re.search(r'<div class="pogo-list-item-number" title="[^"]*">(.*?)</div>', line)
                          number = re.sub(r'\D', '', rawNumber.group(1))
@@ -89,6 +119,10 @@ with open(FILENAME, mode='w', newline='') as file:
                                    entry += f"-{tag}"
                                    if tag == "galar":
                                         name += "_GALARIAN"
+                                        
+                                        if name == "DARMANITAN_GALARIAN":
+                                             name += "_STANDARD"
+
                                    elif tag == "hisui":
                                         name += "_HISUIAN"
                                    else:
@@ -97,14 +131,23 @@ with open(FILENAME, mode='w', newline='') as file:
                               rawForm = re.search(r'<div class="pogo-list-item-form" [^>]*>(.*?)</div>', line)
                               if rawForm:
                                    form = rawForm.group(1).lower()
-                                   form = re.sub(r' (form|mode|forme|style|kyurem)+$', '', form)
+                                   form = re.sub(r' (form|mode|forme|style|kyurem|breed)+$', '', form)
 
                                    if form in tagIDs:
                                         entry += f"-{tagIDs[form]}"
                                         name  += f"_{tagIDs[form].upper()}"
-                                   if form == "sunshine":
+                                   elif form == "sunshine":
                                         entry += "-sunshine"
                                         name += "_SUNNY"
+                                   elif form == "galarian zen":
+                                        entry += "-galar-zen"
+                                        name += "_GALARIAN_ZEN"
+                                   elif form == "10%":
+                                        entry += "-10"
+                                        name = "ZYGARDE_TEN_PERCENT"
+                                   elif form == "pa'u":
+                                        entry += "-pau"
+                                        name += "_PAU"
                                    else:
                                         entry += f"-{form}"
                                         name  += f"_{form.upper()}"
@@ -113,12 +156,14 @@ with open(FILENAME, mode='w', newline='') as file:
                          
                          processed.append(entry)
 
-                         if entry == "0150":
-                              writer.writerow([f"{name}_A", f"{entry}-armored", True, False])
-                              processed.append(f"{entry}-armored")
-                         if entry == "0421":
-                              writer.writerow([f"{name}_OVERCAST", f"{entry}-overcast", True, False])
-                              processed.append(f"{entry}-overcast")
+                         if entry in specialAdds:
+                              for e in specialAdds[entry]:
+                                   nametag  = e["nametag"]
+                                   entrytag = e["entrytag"]
+                                   released = e["released"]
+                                   shadow   = e["shadow"]
+                                   writer.writerow([f"{name}_{nametag}", f"{entry}-{entrytag}", released, shadow])
+                                   processed.append(f"{entry}-{entrytag}")
 
      except Exception as e:
           print("Error:", e)
@@ -203,6 +248,8 @@ def updateShadow(lookupID):
 
 # Change hasShadow values for those that have shadows
 try:
+     print("Updating pokemon shadows to CSV")
+
      with urllib.request.urlopen(SHADOW_URL) as response:
           html = response.read().decode('utf-8')
 
@@ -234,6 +281,8 @@ try:
                          for form in variants[entry]:
                               entry = f"{entry}-{form}"
                               updateShadow(entry)
+     
+     print("CSV successfully written and updated")
 
 except Exception as e:
      print("Error:", e)

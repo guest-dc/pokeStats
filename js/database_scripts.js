@@ -2,7 +2,7 @@
 const COL_SPAN = 5;
 
 skippedNormals = [
-     "Cherrim"
+     "Cherrim", "Giratina", "Shaymin", "Darmanitan", "Tornadus", "Thundurus", "Landorus", "Keldeo", "Meloetta", "Zygarde", "Hoopa", "Oricorio"
 ]
 
 
@@ -17,6 +17,10 @@ skippedVarients = [
      "Rockruff", "Minior", "Mimikyu", "Magearna",
      "Sinistea", "Polteageist", "Morpeko", "Eternatus",
      "Oikologne", "Maushold", "Squawkabilly", "Tatsugiri", "Dudunsparce", "Koraidon", "Miraidon"
+]
+
+weirdDatabaseIncludes = [
+     "ZYGARDE_COMPLETE_TEN_PERCENT", "ZYGARDE_COMPLETE_FIFTY_PERCENT"
 ]
 
 function getPokemonIcon(id, gen) {
@@ -61,6 +65,8 @@ function createRow(pokemon) {
      return row;
 }
 
+let toggleReleased = false;
+
 function fetchDataAndRender() {
      return new Promise((resolve, reject) => {
           fetch("data/database.json")
@@ -69,7 +75,7 @@ function fetchDataAndRender() {
                const tableBody = document.querySelector("#databaseTable tbody");
                tableBody.innerHTML = '';     // Clear existing rows
 
-               data = data.filter(pokemon => pokemon.isReleased);
+               if (toggleReleased) data = data.filter(pokemon => pokemon.isReleased);
 
                for (const pokeData in data) {
 
@@ -84,8 +90,17 @@ function fetchDataAndRender() {
                     if (pokemon.regionForms && !skippedVarients.includes(pokemon.names.English)) {
                          Object.keys(pokemon.regionForms).forEach(regionKey => {
                               const regional = pokemon.regionForms[regionKey];
-                              const row = createRow(regional);
-                              tableBody.appendChild(row);
+                              console.log(regionKey);
+                              if (!weirdDatabaseIncludes.includes(regionKey)) {
+                                   if (regional.isReleased) {
+                                        const row = createRow(regional);
+                                        tableBody.appendChild(row);
+                                   }
+                                   else if (!regional.isReleased && !toggleReleased) {
+                                        const row = createRow(regional);
+                                        tableBody.appendChild(row);
+                                   }
+                              }
                          });
                     }
                }
@@ -126,11 +141,3 @@ $(document).ready(function() {
      renderTable();
 
 });
-
-window.onload = function() {
-     const images = document.querySelectorAll('.pokemon-icon');
-     images.forEach(img => {
-         img.style.width = '50px';
-         img.style.height = '50px';
-     });
- };

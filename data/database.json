@@ -41574,7 +41574,10 @@
                     }
                 ],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0083-galar"
             }
         },
         "evolutions": [],
@@ -41602,7 +41605,10 @@
                 "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_083_00.png",
                 "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_083_00_shiny.png"
             }
-        ]
+        ],
+        "isReleased": true,
+        "hasShadow": false,
+        "imgID": "0083"
     },
     {
         "id": "DODUO",
@@ -56296,7 +56302,10 @@
                     }
                 ],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0122-galar"
             }
         },
         "evolutions": [],
@@ -56324,7 +56333,10 @@
                 "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_122_00.png",
                 "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_122_00_shiny.png"
             }
-        ]
+        ],
+        "isReleased": true,
+        "hasShadow": false,
+        "imgID": "0122"
     },
     {
         "id": "SCYTHER",
@@ -58552,7 +58564,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0128-paldea-aqua"
             },
             "TAUROS_PALDEA_BLAZE": {
                 "id": "TAUROS",
@@ -58854,7 +58869,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0128-paldea-blaze"
             },
             "TAUROS_PALDEA_COMBAT": {
                 "id": "TAUROS",
@@ -59145,7 +59163,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0128-paldea-combat"
             }
         },
         "evolutions": [],
@@ -106579,7 +106600,10 @@
                 "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm250.icon.png",
                 "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/Addressable%20Assets/pm250.s.icon.png"
             }
-        ]
+        ],
+        "isReleased": true,
+        "hasShadow": true,
+        "imgID": "0250"
     },
     {
         "id": "CELEBI",
@@ -170002,7 +170026,10 @@
                 "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_439_00.png",
                 "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_439_00_shiny.png"
             }
-        ]
+        ],
+        "isReleased": true,
+        "hasShadow": false,
+        "imgID": "0439"
     },
     {
         "id": "HAPPINY",
@@ -186851,7 +186878,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0487-altered"
             },
             "GIRATINA_ORIGIN": {
                 "id": "GIRATINA",
@@ -188688,7 +188718,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0492-land"
             },
             "SHAYMIN_SKY": {
                 "id": "SHAYMIN",
@@ -210936,7 +210969,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0555-galar"
             },
             "DARMANITAN_GALARIAN_ZEN": {
                 "id": "DARMANITAN",
@@ -211205,7 +211241,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": false,
+                "hasShadow": false,
+                "imgID": "0555-galar-zen"
             },
             "DARMANITAN_STANDARD": {
                 "id": "DARMANITAN",
@@ -211496,7 +211535,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": true,
+                "imgID": "0555-standard"
             },
             "DARMANITAN_ZEN": {
                 "id": "DARMANITAN",
@@ -239163,7 +239205,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0641-incarnate"
             },
             "TORNADUS_THERIAN": {
                 "id": "TORNADUS",
@@ -240023,7 +240068,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0642-incarnate"
             },
             "THUNDURUS_THERIAN": {
                 "id": "THUNDURUS",
@@ -241526,7 +241574,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0645-incarnate"
             },
             "LANDORUS_THERIAN": {
                 "id": "LANDORUS",
@@ -243386,7 +243437,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0647-ordinary"
             },
             "KELDEO_RESOLUTE": {
                 "id": "KELDEO",
@@ -244232,7 +244286,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0648-aria"
             },
             "MELOETTA_PIROUETTE": {
                 "id": "MELOETTA",
@@ -272749,7 +272806,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0678-female"
             }
         },
         "evolutions": [],
@@ -288098,7 +288158,10 @@
                     }
                 ],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0718-50"
             },
             "ZYGARDE_TEN_PERCENT": {
                 "id": "ZYGARDE",
@@ -288452,7 +288515,10 @@
                     }
                 ],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0718-10"
             }
         },
         "evolutions": [
@@ -289267,7 +289333,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0720-confined"
             },
             "HOOPA_UNBOUND": {
                 "id": "HOOPA",
@@ -295993,7 +296062,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0741-baile"
             },
             "ORICORIO_PAU": {
                 "id": "ORICORIO",
@@ -296223,7 +296295,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0741-pau"
             },
             "ORICORIO_POMPOM": {
                 "id": "ORICORIO",
@@ -296453,7 +296528,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0741-pompom"
             },
             "ORICORIO_SENSU": {
                 "id": "ORICORIO",
@@ -338544,7 +338622,10 @@
                 "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_865_31.png",
                 "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_865_31_shiny.png"
             }
-        ]
+        ],
+        "isReleased": true,
+        "hasShadow": false,
+        "imgID": "0865"
     },
     {
         "id": "MR_RIME",
@@ -338901,7 +338982,10 @@
                 "image": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_866_31.png",
                 "shinyImage": "https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_866_31_shiny.png"
             }
-        ]
+        ],
+        "isReleased": true,
+        "hasShadow": false,
+        "imgID": "0866"
     },
     {
         "id": "RUNERIGUS",
