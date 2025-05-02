@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+     <title>Poke Stats</title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1">
+
+     <link rel="stylesheet" href="css/main_styles.css">
+     <link rel="stylesheet" href="css/dmg_styles.css">
+
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" />
+</head>
+
+<body>
+     <section id="navbar">
+
+          <div class="navbar-wrapper">
+
+               <a href="#" onclick="window.location.href = LANDING_URL;" class="nav-link">
+                    <div class="logo">
+                         <img alt="0197-shiny.png" src="images/icons/shiny_umbr_logo.png" />
+                         <span class="logo-text">Poke Stats</span>
+                    </div>
+               </a>
+
+               <div class="nav-links">
+                    <a href="#" onclick="window.location.href = DATABASE_URL;" class="nav-link">Database</a>
+                    <a href="#" onclick="window.location.href = DMG_URL;" class="nav-link">DMG Spreadsheet</a>
+                    <a href="#" onclick="window.location.href = DOCUMENTATION_URL;" class="nav-link">Documentation</a>
+               </div>
+
+               <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
+
+          </div>
+
+          <div class="menu-dropdown">
+               <a href="#" onclick="window.location.href = DATABASE_URL;" class="nav-link">Database</a>
+               <a href="#" onclick="window.location.href = DMG_SPREADSHEET_URL;" class="nav-link">DMG Spreadsheet</a>
+               <a href="#" onclick="window.location.href = DOCUMENTATION_URL;" class="nav-link">Documentation</a>
+          </div>
+
+     </section>
+
+     <center>
+          <h1>Pokemon Damage Spreadsheet</h1>
+
+          <div class="button-container" style="margin-bottom: 1em;">
+               <table style="width: 100%; max-width: 800px; margin: auto;">
+
+                    <tr>
+
+                         <td id="type-toggles" style="vertical-align: top;">
+                              <h2>Typing</h2>
+                              <table>
+                                   <tr>
+                                        <td><button class="type-toggle type-normal" data-type="Normal">Normal</button></td>
+                                        <td><button class="type-toggle type-fire" data-type="Fire">Fire</button></td>
+                                   </tr>
+                                   <tr>
+                                        <td><button class="type-toggle type-water" data-type="Water">Water</button></td>
+                                        <td><button class="type-toggle type-electric" data-type="Electric">Electric</button></td>
+                                   </tr>
+                                   <tr>
+                                        <td><button class="type-toggle type-grass" data-type="Grass">Grass</button></td>
+                                        <td><button class="type-toggle type-ice" data-type="Ice">Ice</button></td>
+                                   </tr>
+                                   <tr>
+                                        <td><button class="type-toggle type-fighting" data-type="Fighting">Fighting</button></td>
+                                        <td><button class="type-toggle type-poison" data-type="Poison">Poison</button></td>
+                                   </tr>
+                                   <tr>
+                                        <td><button class="type-toggle type-ground" data-type="Ground">Ground</button></td>
+                                        <td><button class="type-toggle type-flying" data-type="Flying">Flying</button></td>
+                                   </tr>
+                                   <tr>
+                                        <td><button class="type-toggle type-psychic" data-type="Psychic">Psychic</button></td>
+                                        <td><button class="type-toggle type-bug" data-type="Bug">Bug</button></td>
+                                   </tr>
+                                   <tr>
+                                        <td><button class="type-toggle type-rock" data-type="Rock">Rock</button></td>
+                                        <td><button class="type-toggle type-ghost" data-type="Ghost">Ghost</button></td>
+                                   </tr>
+                                   <tr>
+                                        <td><button class="type-toggle type-dragon" data-type="Dragon">Dragon</button></td>
+                                        <td><button class="type-toggle type-dark" data-type="Dark">Dark</button></td>
+                                   </tr>
+                                   <tr>
+                                        <td><button class="type-toggle type-steel" data-type="Steel">Steel</button></td>
+                                        <td><button class="type-toggle type-fairy" data-type="Fairy">Fairy</button></td>
+                                   </tr>
+                              </table>
+                         </td>
+
+                         <td id="filter-toggles" style="vertical-align: top;">
+                              <h2>Filters</h2>
+                              <div id="filter-checkboxes">
+                                   <label>
+                                        <input type="checkbox" id="best-checkbox">
+                                        Best
+                                   </label><br><br>
+                                   <label>
+                                        <input type="checkbox" id="same-type-checkbox">
+                                        Same Move Typing
+                                   </label><br><br>
+                                   <label>
+                                        <input type="checkbox" id="shadows-checkbox">
+                                        Shadows
+                                   </label><br><br>
+                                   <label>
+                                        <input type="checkbox" id="megas-checkbox">
+                                        Megas
+                                   </label>
+                              </div>
+                         </td>
+
+                    </tr>
+
+               </table>
+          </div>
+
+
+
+          <div class="table-container">
+               <table id="dmgTable">
+                    <thead>
+                         <tr>
+                              <th style="text-align: left;">Dex#</th>
+                              <th style="text-align: left;">Pokémon</th>
+                              <th>Type</th>
+                              <th>Fast Move</th>
+                              <th>Charged Move</th>
+                              <th>DPS0</th>
+                              <th>DPS</th>
+                              <th>Max CP</th>
+                         </tr>
+                    </thead>
+
+                    <tbody></tbody>
+               </table>
+          </div>
+     </center>
+
+
+     <footer id="footer">
+          <div class="logo">
+               <img alt="0197-shiny.png" src="images/icons/shiny_umbr_logo.png" />
+               <span class="logo-text">Poke Stats</span>
+          </div>
+          <div class="nav-links">
+               <a href="#" onclick="window.location.href = RESOURCES_URL;" class="nav-link">Resources</a>
+          </div>
+          <p>Davis Guest || Mercer University || 2025</p>
+     </footer>
+
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+     <script src="data/database.js"></script>
+     <script src="js/globals.js"></script>
+     <script src="js/dmg_scripts.js"></script>
+</body>
+
+</html>

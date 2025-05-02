@@ -1,0 +1,141 @@
+.table-container {
+  min-width: 900px;
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+#dmgTable {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 5px #475569;
+}
+
+#dmgTable thead {
+  background-color: #475569;
+  color: #ffffff;
+}
+
+#dmgTable tbody tr:nth-of-type(even) {
+  background-color: #f2f2f2;
+}
+
+#dmgTable tbody td img {
+  vertical-align: middle;
+}
+
+#type-icons img {
+  width: 100%;
+}
+
+.pokemon-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* ========================================================= */
+
+.button-container table {
+  border-collapse: collapse;
+}
+
+.button-container .type-toggle {
+     width: 100px;
+     height: 36px;
+     margin: 4px;
+     padding: 0;
+     font-size: 14px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.2s;
+     color: white;
+     font-weight: bold;
+}
+
+/* Normal Type */
+.type-normal       { background-color: #A8A77A; }
+.type-normal.active-toggle { background-color: #8a885f; }
+
+/* Fire Type */
+.type-fire         { background-color: #EE8130; }
+.type-fire.active-toggle   { background-color: #c76521; }
+
+/* Water Type */
+.type-water        { background-color: #6390F0; }
+.type-water.active-toggle  { background-color: #456cd0; }
+
+/* Electric Type */
+.type-electric     { background-color: #F7D02C; }
+.type-electric.active-toggle { background-color: #d3ae19; }
+
+/* Grass Type */
+.type-grass        { background-color: #7AC74C; }
+.type-grass.active-toggle   { background-color: #609c3a; }
+
+/* Ice Type */
+.type-ice          { background-color: #96D9D6; }
+.type-ice.active-toggle     { background-color: #71b6b3; }
+
+/* Fighting Type */
+.type-fighting     { background-color: #C22E28; }
+.type-fighting.active-toggle { background-color: #9f2420; }
+
+/* Poison Type */
+.type-poison       { background-color: #A33EA1; }
+.type-poison.active-toggle  { background-color: #812f7f; }
+
+/* Ground Type */
+.type-ground       { background-color: #E2BF65; }
+.type-ground.active-toggle  { background-color: #b79d4d; }
+
+/* Flying Type */
+.type-flying       { background-color: #A98FF3; }
+.type-flying.active-toggle  { background-color: #8669d6; }
+
+/* Psychic Type */
+.type-psychic      { background-color: #F95587; }
+.type-psychic.active-toggle { background-color: #cb3365; }
+
+/* Bug Type */
+.type-bug          { background-color: #A6B91A; }
+.type-bug.active-toggle     { background-color: #84920f; }
+
+/* Rock Type */
+.type-rock         { background-color: #B6A136; }
+.type-rock.active-toggle    { background-color: #917f27; }
+
+/* Ghost Type */
+.type-ghost        { background-color: #735797; }
+.type-ghost.active-toggle   { background-color: #58416f; }
+
+/* Dragon Type */
+.type-dragon       { background-color: #6F35FC; }
+.type-dragon.active-toggle  { background-color: #5527c5; }
+
+/* Dark Type */
+.type-dark         { background-color: #705746; }
+.type-dark.active-toggle    { background-color: #554032; }
+
+/* Steel Type */
+.type-steel        { background-color: #B7B7CE; }
+.type-steel.active-toggle   { background-color: #9393aa; }
+
+/* Fairy Type */
+.type-fairy        { background-color: #D685AD; }
+.type-fairy.active-toggle   { background-color: #b1688e; }
+
+#filter-checkboxes label {
+     font-size: 16px;
+     cursor: pointer;
+     user-select: none;
+}
+
+#filter-checkboxes input[type="checkbox"] {
+     margin-right: 6px;
+     transform: scale(1.2);
+     cursor: pointer;
+}
