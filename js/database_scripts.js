@@ -65,41 +65,34 @@ function createRow(pokemon) {
      return row;
 }
 
-let toggleReleased = false;
-
 function fetchDataAndRender() {
      return new Promise((resolve, reject) => {
           fetch("data/database.json")
           .then(response => response.json())
           .then(data => {
                const tableBody = document.querySelector("#databaseTable tbody");
-               tableBody.innerHTML = '';     // Clear existing rows
+               tableBody.innerHTML = '';
 
-               if (toggleReleased) data = data.filter(pokemon => pokemon.isReleased);
+               data = data.filter(pokemon => pokemon.isReleased);
 
                for (const pokeData in data) {
 
                     const pokemon = data[pokeData];
-                    const row = createRow(pokemon);
                     
                     if (!skippedNormals.includes(pokemon.names.English)) {
+                         const row = createRow(pokemon);
                          tableBody.appendChild(row);
                     }
 
                     // insert regionals and varients
                     if (pokemon.regionForms && !skippedVarients.includes(pokemon.names.English)) {
                          Object.keys(pokemon.regionForms).forEach(regionKey => {
+                              
                               const regional = pokemon.regionForms[regionKey];
-                              console.log(regionKey);
-                              if (!weirdDatabaseIncludes.includes(regionKey)) {
-                                   if (regional.isReleased) {
-                                        const row = createRow(regional);
-                                        tableBody.appendChild(row);
-                                   }
-                                   else if (!regional.isReleased && !toggleReleased) {
-                                        const row = createRow(regional);
-                                        tableBody.appendChild(row);
-                                   }
+
+                              if (!weirdDatabaseIncludes.includes(regionKey) && regional.isReleased) {
+                                   const row = createRow(regional);
+                                   tableBody.appendChild(row);
                               }
                          });
                     }
@@ -108,6 +101,7 @@ function fetchDataAndRender() {
                if (data.length === 0) {
                     tableBody.innerHTML = `<tr><td colspan="${COL_SPAN}">No Pokémon found.</td></tr>`;
                }
+               
                resolve();
           })
           .catch(error => {
