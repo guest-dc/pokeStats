@@ -772,7 +772,7 @@ SPEWPA,0665,True,False
 VIVILLON,0666,True,False
 LITLEO,0667,True,False
 PYROAR,0668,True,False
-FLABÉBÉ,0669,True,False
+FLABï¿½Bï¿½,0669,True,False
 FLOETTE,0670,True,False
 FLORGES,0671,True,False
 SKIDDO,0672,True,False
@@ -934,8 +934,8 @@ ORICORIO_SENSU,0741-sensu,True,False
 LYCANROC_MIDNIGHT,0745-midnight,True,False
 LYCANROC_DUSK,0745-dusk,True,False
 WISHIWASHI_SCHOOL,0746-school,False,False
-NECROZMA_DUSKMANE,0800-duskmane,True,False
-NECROZMA_DAWNWINGS,0800-dawnwings,True,False
+NECROZMA_DUSK_MANE,0800-dusk,True,False
+NECROZMA_DAWN_WINGS,0800-dawn,True,False
 NECROZMA_ULTRA,0800-ultra,False,False
 MELTAN,0808,True,False
 MELMETAL,0809,True,False

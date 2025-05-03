@@ -321201,7 +321201,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0800-dawn"
             },
             "NECROZMA_DUSK_MANE": {
                 "id": "NECROZMA",
@@ -321491,7 +321494,10 @@
                 "regionForms": [],
                 "evolutions": [],
                 "hasMegaEvolution": false,
-                "megaEvolutions": []
+                "megaEvolutions": [],
+                "isReleased": true,
+                "hasShadow": false,
+                "imgID": "0800-dusk"
             },
             "NECROZMA_ULTRA": {
                 "id": "NECROZMA",

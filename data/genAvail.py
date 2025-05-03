@@ -14,8 +14,6 @@ tagIDs = {
      "single strike": "single-strike",
      "rapid strike": "rapid-strike",
      "pom-pom" : "pompom",
-     "dusk mane": "duskmane",
-     "dawn wings": "dawnwings",
      "low key": "lowkey"
 }
 
@@ -155,6 +153,12 @@ with open(FILENAME, mode='w', newline='') as file:
                                    elif form == "pa'u":
                                         entry += "-pau"
                                         name += "_PAU"
+                                   elif form == "dusk mane":
+                                        entry += "-dusk"
+                                        name += "_DUSK_MANE"
+                                   elif form == "dawn wings":
+                                        entry += "-dawn"
+                                        name += "_DAWN_WINGS"
                                    else:
                                         entry += f"-{form}"
                                         name  += f"_{form.upper()}"

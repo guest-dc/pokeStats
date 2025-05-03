@@ -334,21 +334,26 @@ function fetchDataAndRender() {
                for (const pokeData in data) {
                     const pokemon = data[pokeData];
 
-                    const movesetData = calcAllMoveComboDPS(pokemon, false);
-                    for (const combo of movesetData) {
-                         const row = createRow(pokemon, combo, false);
-                         if (!skippedNormals.includes(pokemon.names.English)) {
-                              tableBody.appendChild(row);
-                         }
-                    }
-
-                    // insert shadows
-                    if (pokemon.hasShadow) {
-                         const movesetData = calcAllMoveComboDPS(pokemon, true);
+                    const primaryType = pokemon.primaryType.names.English;
+                    const secondaryType = pokemon.secondaryType ? pokemon.secondaryType.names.English : "";
+                    
+                    if (activeType == null || activeType == primaryType || activeType == secondaryType) {
+                         const movesetData = calcAllMoveComboDPS(pokemon, false);
                          for (const combo of movesetData) {
-                              const row = createRow(pokemon, combo, true);
+                              const row = createRow(pokemon, combo, false);
                               if (!skippedNormals.includes(pokemon.names.English)) {
                                    tableBody.appendChild(row);
+                              }
+                         }
+
+                         // insert shadows
+                         if (pokemon.hasShadow) {
+                              const movesetData = calcAllMoveComboDPS(pokemon, true);
+                              for (const combo of movesetData) {
+                                   const row = createRow(pokemon, combo, true);
+                                   if (!skippedNormals.includes(pokemon.names.English)) {
+                                        tableBody.appendChild(row);
+                                   }
                               }
                          }
                     }
@@ -360,19 +365,25 @@ function fetchDataAndRender() {
                               const variant = pokemon.regionForms[regionKey];
                               const movesetData = calcAllMoveComboDPS(variant, false);
 
-                              if (!weirdDatabaseIncludes.includes(regionKey) && variant.isReleased) {
-                                   for (const combo of movesetData) {
-                                        const row = createRow(variant, combo, false);
-                                        tableBody.appendChild(row);
-                                   }
+                              const primaryType = variant.primaryType.names.English;
+                              const secondaryType = variant.secondaryType ? variant.secondaryType.names.English : "";
 
-                                   // insert shadows
-                                   if (variant.hasShadow) {
-                                        const movesetData = calcAllMoveComboDPS(variant, true);
+                              if (activeType == null || activeType == primaryType || activeType == secondaryType) {
+
+                                   if (!weirdDatabaseIncludes.includes(regionKey) && variant.isReleased) {
                                         for (const combo of movesetData) {
-                                             const row = createRow(variant, combo, true);
-                                             if (!skippedNormals.includes(variant.names.English)) {
-                                                  tableBody.appendChild(row);
+                                             const row = createRow(variant, combo, false);
+                                             tableBody.appendChild(row);
+                                        }
+
+                                        // insert shadows
+                                        if (variant.hasShadow) {
+                                             const movesetData = calcAllMoveComboDPS(variant, true);
+                                             for (const combo of movesetData) {
+                                                  const row = createRow(variant, combo, true);
+                                                  if (!skippedNormals.includes(variant.names.English)) {
+                                                       tableBody.appendChild(row);
+                                                  }
                                              }
                                         }
                                    }
@@ -387,10 +398,16 @@ function fetchDataAndRender() {
                               const mega = pokemon.megaEvolutions[megaKey];
                               const movesetMegaData = calcAllMoveComboDPS_Mega(mega, pokemon);
 
-                              if (!weirdDatabaseIncludes.includes(megaKey)) {
-                                   for (const combo of movesetMegaData) {
-                                        const row = createRow_Mega(mega, combo, pokemon);
-                                        tableBody.appendChild(row);
+                              const primaryType = mega.primaryType.names.English;
+                              const secondaryType = mega.secondaryType ? mega.secondaryType.names.English : "";
+
+                              if (activeType == null || activeType == primaryType || activeType == secondaryType) {
+
+                                   if (!weirdDatabaseIncludes.includes(megaKey)) {
+                                        for (const combo of movesetMegaData) {
+                                             const row = createRow_Mega(mega, combo, pokemon);
+                                             tableBody.appendChild(row);
+                                        }
                                    }
                               }
                          });
