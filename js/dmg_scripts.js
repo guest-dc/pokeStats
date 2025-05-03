@@ -196,21 +196,21 @@ function calcAllMoveComboDPS_Mega(mega, parent) {
 // ===============================================================================================
 // HELPER METHODS
 
-function shouldInclude(pokemon) {
-     if (activeType) {
-          const type1 = pokemon.primaryType.names.English;
-          const type2 = pokemon.secondaryType ? pokemon.secondaryType.names.English : "";
-          if (type1 !== activeType && type2 !== activeType) return false;
-     }
+// function shouldInclude(pokemon) {
+//      if (activeType) {
+//           const type1 = pokemon.primaryType.names.English;
+//           const type2 = pokemon.secondaryType ? pokemon.secondaryType.names.English : "";
+//           if (type1 !== activeType && type2 !== activeType) return false;
+//      }
 
-     if (bestChecked && !pokemon.names.English.includes("★")) return false;
+//      if (bestChecked && !pokemon.names.English.includes("★")) return false;
 
-     if (megasChecked && !pokemon.hasMegaEvolution) return false;
+//      if (megasChecked && !pokemon.hasMegaEvolution) return false;
 
-     if (shadowsChecked && !pokemon.hasShadow) return false;
+//      if (shadowsChecked && !pokemon.hasShadow) return false;
 
-     return true;
-}
+//      return true;
+// }
 
 function getPokemonIcon(id, gen) {
      return `<img src="images/sprites/gen${gen}/${id}.png" class="pokemon-icon" alt="${id}">`;
@@ -244,9 +244,10 @@ function formatMegaTag(formId) {
 // ===============================================================================================
 // TABLE GENERATION
 
-function createRow(pokemon, combo) {
+function createRow(pokemon, combo, isShadow) {
      let dexNr = pokemon.dexNr;
      let name = pokemon.names.English;
+     if (isShadow) name += " (Shadow)"
 
      let id = pokemon.imgID;
      let pokemonIcon = getPokemonIcon(id, pokemon.generation);
@@ -255,9 +256,6 @@ function createRow(pokemon, combo) {
      let secondaryType = pokemon.secondaryType ? pokemon.secondaryType.names.English : "";
      let typeIcons = getTypeIcon(primaryType);
      if (secondaryType) typeIcons += getTypeIcon(secondaryType);
-
-     //let megaIcon = pokemon.hasMegaEvolution ? getMegaIcon() : "";
-     //let shadowIcon = pokemon.hasShadow ? getShadowIcon() : "";
 
      let maxCP = calcMaxCP(pokemon);
 
@@ -338,9 +336,20 @@ function fetchDataAndRender() {
 
                     const movesetData = calcAllMoveComboDPS(pokemon, false);
                     for (const combo of movesetData) {
-                         const row = createRow(pokemon, combo);
+                         const row = createRow(pokemon, combo, false);
                          if (!skippedNormals.includes(pokemon.names.English)) {
                               tableBody.appendChild(row);
+                         }
+                    }
+
+                    // insert shadows
+                    if (pokemon.hasShadow) {
+                         const movesetData = calcAllMoveComboDPS(pokemon, true);
+                         for (const combo of movesetData) {
+                              const row = createRow(pokemon, combo, true);
+                              if (!skippedNormals.includes(pokemon.names.English)) {
+                                   tableBody.appendChild(row);
+                              }
                          }
                     }
 
@@ -353,14 +362,25 @@ function fetchDataAndRender() {
 
                               if (!weirdDatabaseIncludes.includes(regionKey) && variant.isReleased) {
                                    for (const combo of movesetData) {
-                                        const row = createRow(variant, combo);
+                                        const row = createRow(variant, combo, false);
                                         tableBody.appendChild(row);
+                                   }
+
+                                   // insert shadows
+                                   if (variant.hasShadow) {
+                                        const movesetData = calcAllMoveComboDPS(variant, true);
+                                        for (const combo of movesetData) {
+                                             const row = createRow(variant, combo, true);
+                                             if (!skippedNormals.includes(variant.names.English)) {
+                                                  tableBody.appendChild(row);
+                                             }
+                                        }
                                    }
                               }
                          });
                     }
 
-                    //insert megas
+                    // insert megas
                     if (pokemon.hasMegaEvolution) {
                          Object.keys(pokemon.megaEvolutions).forEach(megaKey => {
 
@@ -375,6 +395,8 @@ function fetchDataAndRender() {
                               }
                          });
                     }
+
+                    
                }
 
                if (data.length === 0) {
