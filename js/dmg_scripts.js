@@ -34,119 +34,73 @@ weirdDatabaseIncludes = [
 // ===============================================================================================
 // Formula METHODS
 
-function calcDPS0(FDmg, CDmg, FE, CE, FDur, CDur) {
-     const FDPS = FDmg / FDur;
-     const CDPS = CDmg / CDur;
-     const FEPS = FE / FDur;
-     const CEPS = CE / CDur;
-     return (FDPS * CEPS + CDPS * FEPS) / (CEPS + FEPS);
+function calcMaxCP(pokemon) {
+     const cpm = 0.84029999;
+     const attack = pokemon.stats.attack + 15;
+     const defense = Math.sqrt(pokemon.stats.defense + 15);
+     const hp = Math.sqrt(pokemon.stats.stamina + 15);
+     const cp = (attack * defense * hp * (cpm ** 2)) / 10;
+     return Math.floor(Math.max(10, cp));
 }
 
-function calcEnergyEfficiency(FDmg, CDmg, FE, CE, FDur, CDur) {
-     const FDPS = FDmg / FDur;
-     const CDPS = CDmg / CDur;
-     const FEPS = FE / FDur;
-     const CEPS = CE / CDur;
-     return (CDPS - FDPS) / (CEPS + FEPS);
-}
-
-function calcComprehensiveDPS(FDmg, CDmg, FE, CE, FDur, CDur, x, y, HP) {
-     const FDPS = FDmg / FDur;
-     const CDPS = CDmg / CDur;
-     const FEPS = FE / FDur;
-     const CEPS = CE / CDur;
-     const DPS0 = (FDPS * CEPS + CDPS * FEPS) / (CEPS + FEPS);
-     const EE = (CDPS - FDPS) / (CEPS + FEPS);
-     return DPS0 + EE * (0.5 - x / HP) * y;
-}
-
-function adjustedOneBarCEPS(CE, FE, y, CDWS, CDur) {
-     const adjustedCE = CE + 0.5 * FE + 0.5 * y * CDWS;
-     return adjustedCE / CDur;
-}
-
-function calculateBattleDuration(HP, y) {
-     return HP / y;
-}
-
-function calculateNM(T, CE, CDur, x, HP, FDur, FE) {
-     const numeratorN = T * CE + CDur * (x - 0.5 * HP);
-     const numeratorM = T * FE - FDur * (x - 0.5 * HP);
-     const denominator = FDur * CE + CDur * FE;
-
-     const n = numeratorN / denominator;
-     const m = numeratorM / denominator;
-
-     return { n, m };
-}
-
-function calculateTrueDPS(FDmg, CDmg, n, m, T) {
-     return (n * FDmg + m * CDmg) / T;
-}
-
-function expectedXNeutral(CE, FE) {
-     return 0.5 * CE + 0.5 * FE;
-}
-
-function expectedYNeutral(Def) {
-     return 900 / Def;
-}
-
-function expectedXSpecific(CE, FE, lambda, FDmgEnemy, CDmgEnemy) {
-     return 0.5 * CE + 0.5 * FE + 0.5 * (lambda * FDmgEnemy + CDmgEnemy / (lambda + 1));
-}
-
-function expectedYSpecific(lambda, FDmgEnemy, CDmgEnemy, FDurEnemy, CDurEnemy) {
-     return (lambda * FDmgEnemy + CDmgEnemy) / (lambda * (FDurEnemy + 2) + CDurEnemy + 2);
-}
-
-function calculateAllMoveCombosDPS(pokemon) {
+function calcAllMoveComboDPS(pokemon, isShadow) {
      const results = [];
 
      const fastMoves = [
           ...Object.values(pokemon.quickMoves || {}),
           ...Object.values(pokemon.eliteQuickMoves || {})
      ];
-
      const chargeMoves = [
           ...Object.values(pokemon.cinematicMoves || {}),
           ...Object.values(pokemon.eliteCinematicMoves || {})
      ];
 
-     const { stamina, defense } = pokemon.stats;
-     const HP = stamina * 2;
-     const Def = defense;
+     const DMG_multiA = 0.5;
+     const DMG_Const  = 1.0;
+     const EnergyPerHPLost = 0.5;
 
-     const y = expectedYNeutral(Def); // enemy DPS
+     const pokemonType1 = pokemon.primaryType.names.English;
+     const pokemonType2 = pokemon.secondaryType ? pokemon.secondaryType.names.English : "";
+
+     const HP = pokemon.stats.stamina;
+     const Atk = pokemon.stats.attack; 
+     const Def = pokemon.stats.defense;
+
+     const Sh_atk_multi = isShadow ? 1.2 : 1.0;
+     const Sh_def_multi = isShadow ? 0.83 : 1.0;
+
+     const BossDef = 160;
+     const BossDPS = 1900 / (Def * Sh_def_multi);
 
      for (const fast of fastMoves) {
-          const fCombat = fast.combat;
-          const FDmg = fCombat.power;
-          const FE = fCombat.energy;
-          const FDur = (fast.durationMs || 0) / 1000;
-          if (FDur === 0) continue; // skip incomplete
 
-          const FDPS = FDmg / FDur;
-          const FEPS = FE / FDur;
+          const fastType = fast.type.names.English;
+          const F_multi = (pokemonType1 == fastType || pokemonType2 == fastType) ? 1.2 : 1.0;
+
+          const F_DmgBase = fast.power * Sh_atk_multi * F_multi * DMG_multiA;
+          const FDmg = Math.floor(F_DmgBase * Atk / BossDef) + DMG_Const;
+          const F_DPS = FDmg / (fast.durationMs / 1000); // waived server delay integration
+          const F_EPS = fast.energy / (fast.durationMs / 1000);
 
           for (const charge of chargeMoves) {
-               const cCombat = charge.combat;
-               const CDmg = cCombat.power;
-               const CE = -cCombat.energy; // stored as negative
-               const CDur = (charge.durationMs || 0) / 1000;
-               const CDWS = 1.0; // assume avg CDWS if not provided
 
-               if (CDur === 0 || CE === 0) continue;
+               const chargeType = charge.type.names.English;
 
-               // Expected x energy remaining
-               const x = expectedXNeutral(CE, FE);
+               const C_multi = (pokemonType1 == chargeType || pokemonType2 == chargeType) ? 1.2 : 1.0;
 
-               const CDPS = CDmg / CDur;
-               const CEPS = CE / CDur;
+               const C_DmgBase = charge.power * Sh_atk_multi * C_multi * DMG_multiA;
+               const CDmg = Math.floor(C_DmgBase * Atk / BossDef) + DMG_Const;
+               const C_DPS = CDmg / (charge.durationMs / 1000); // waived server delay & waived player charged move cast time integration
 
-               // Calculate DPS0 and DPS using modular functions
-               const DPS0 = calcDPS0(FDmg, CDmg, FE, CE, FDur, CDur);
-               const DPS = calcComprehensiveDPS(FDmg, CDmg, FE, CE, FDur, CDur, x, y, HP);
+               const C_EPS = -charge.energy / (fast.durationMs / 1000);
+               //const CDWS = 1.0; // assume avg CDWS, not provided in API
+               //const C_EPSθ = (-charge.energy == 100) ? 0.5 * fast.energy + (0.5 * BossDPS) * CDWS : 0.0;
+
+               const DPS_Cycle = (F_DPS * C_EPS + C_DPS * F_EPS) / (F_EPS + C_EPS);
+               const EnergyLeft = 0.5 * fast.energy + 0.5 * -charge.energy;
+               const DPS_Comp = (F_DPS > C_DPS) ? DPS_Cycle : Math.max(0, DPS_Cycle + ((C_DPS - F_DPS) / (C_EPS + F_EPS) * (EnergyPerHPLost - (EnergyLeft / HP)) * BossDPS));
+               const DPS_Max = Math.max(F_DPS, DPS_Comp);
+               const TDO = HP / BossDPS * DPS_Max;
 
                results.push({
                     pokemon: pokemon.formId,
@@ -155,8 +109,8 @@ function calculateAllMoveCombosDPS(pokemon) {
                     fastType: fast.type.names.English,
                     chargeMove: charge.names.English,
                     chargeType: charge.type.names.English,
-                    DPS0: DPS0.toFixed(2),
-                    DPS: DPS.toFixed(2)
+                    DPS: DPS_Comp.toFixed(2),
+                    TDO: TDO.toFixed(2)
                });
           }
      }
@@ -164,53 +118,64 @@ function calculateAllMoveCombosDPS(pokemon) {
      return results;
 }
 
-function calculateAllMoveCombosDPS_Mega(mega, parent) {
+function calcAllMoveComboDPS_Mega(mega, parent) {
      const results = [];
 
      const fastMoves = [
           ...Object.values(parent.quickMoves || {}),
           ...Object.values(parent.eliteQuickMoves || {})
      ];
-
      const chargeMoves = [
           ...Object.values(parent.cinematicMoves || {}),
           ...Object.values(parent.eliteCinematicMoves || {})
      ];
 
-     const { stamina, defense } = mega.stats;
-     const HP = stamina * 2;
-     const Def = defense;
+     const DMG_multiA = 0.5;
+     const DMG_Const  = 1.0;
+     const EnergyPerHPLost = 0.5;
 
-     const y = expectedYNeutral(Def); // enemy DPS
+     const pokemonType1 = mega.primaryType.names.English;
+     const pokemonType2 = mega.secondaryType ? mega.secondaryType.names.English : "";
+
+     const HP  = mega.stats.stamina;
+     const Atk = mega.stats.attack; 
+     const Def = mega.stats.defense;
+
+     const Sh_atk_multi = 1.0;
+     const Sh_def_multi = 1.0;
+
+     const BossDef = 160;
+     const BossDPS = 2200 / (Def * Sh_def_multi);
 
      for (const fast of fastMoves) {
-          const fCombat = fast.combat;
-          const FDmg = fCombat.power;
-          const FE = fCombat.energy;
-          const FDur = (fast.durationMs || 0) / 1000;
-          if (FDur === 0) continue; // skip incomplete
 
-          const FDPS = FDmg / FDur;
-          const FEPS = FE / FDur;
+          const fastType = fast.type.names.English;
+          const F_multi = (pokemonType1 == fastType || pokemonType2 == fastType) ? 1.2 : 1.0;
+
+          const F_DmgBase = fast.power * Sh_atk_multi * F_multi * DMG_multiA;
+          const FDmg = Math.floor(F_DmgBase * Atk / BossDef) + DMG_Const;
+          const F_DPS = FDmg / (fast.durationMs / 1000); // waived server delay integration
+          const F_EPS = fast.energy / (fast.durationMs / 1000);
 
           for (const charge of chargeMoves) {
-               const cCombat = charge.combat;
-               const CDmg = cCombat.power;
-               const CE = -cCombat.energy; // stored as negative
-               const CDur = (charge.durationMs || 0) / 1000;
-               const CDWS = 1.0; // assume avg CDWS if not provided
 
-               if (CDur === 0 || CE === 0) continue;
+               const chargeType = charge.type.names.English;
 
-               // Expected x energy remaining
-               const x = expectedXNeutral(CE, FE);
+               const C_multi = (pokemonType1 == chargeType || pokemonType2 == chargeType) ? 1.2 : 1.0;
 
-               const CDPS = CDmg / CDur;
-               const CEPS = CE / CDur;
+               const C_DmgBase = charge.power * Sh_atk_multi * C_multi * DMG_multiA;
+               const CDmg = Math.floor(C_DmgBase * Atk / BossDef) + DMG_Const;
+               const C_DPS = CDmg / (charge.durationMs / 1000); // waived server delay & waived player charged move cast time integration
 
-               // Calculate DPS0 and DPS using modular functions
-               const DPS0 = calcDPS0(FDmg, CDmg, FE, CE, FDur, CDur);
-               const DPS = calcComprehensiveDPS(FDmg, CDmg, FE, CE, FDur, CDur, x, y, HP);
+               const C_EPS = -charge.energy / (fast.durationMs / 1000);
+               //const CDWS = 1.0; // assume avg CDWS, not provided in API
+               //const C_EPSθ = (-charge.energy == 100) ? 0.5 * fast.energy + (0.5 * BossDPS) * CDWS : 0.0;
+
+               const DPS_Cycle = (F_DPS * C_EPS + C_DPS * F_EPS) / (F_EPS + C_EPS);
+               const EnergyLeft = 0.5 * fast.energy + 0.5 * -charge.energy;
+               const DPS_Comp = (F_DPS > C_DPS) ? DPS_Cycle : Math.max(0, DPS_Cycle + ((C_DPS - F_DPS) / (C_EPS + F_EPS) * (EnergyPerHPLost - (EnergyLeft / HP)) * BossDPS));
+               const DPS_Max = Math.max(F_DPS, DPS_Comp);
+               const TDO = HP / BossDPS * DPS_Max;
 
                results.push({
                     pokemon: mega.id,
@@ -219,25 +184,13 @@ function calculateAllMoveCombosDPS_Mega(mega, parent) {
                     fastType: fast.type.names.English,
                     chargeMove: charge.names.English,
                     chargeType: charge.type.names.English,
-                    DPS0: DPS0.toFixed(2),
-                    DPS: DPS.toFixed(2)
+                    DPS: DPS_Comp.toFixed(2),
+                    TDO: TDO.toFixed(2)
                });
           }
      }
 
      return results;
-}
-
-function calcMaxCP(pokemon) {
-     const cpm = 0.84029999;
-
-     const attack = pokemon.stats.attack + 15;
-     const defense = Math.sqrt(pokemon.stats.defense + 15);
-     const hp = Math.sqrt(pokemon.stats.stamina + 15);
-
-     const cp = (attack * defense * hp * (cpm ** 2)) / 10;
-
-     return Math.floor(Math.max(10, cp));
 }
 
 // ===============================================================================================
@@ -308,8 +261,8 @@ function createRow(pokemon, combo) {
 
      let maxCP = calcMaxCP(pokemon);
 
-     let DPS0 = combo.DPS0;
      let DPS = combo.DPS;
+     let TDO = combo.TDO;
      
      let fastMove = combo.fastMove;
      let fastMoveIcon = getTypeIcon(combo.fastType);
@@ -324,8 +277,8 @@ function createRow(pokemon, combo) {
           <td id="type-icons">${typeIcons}</td>
           <td id="move-icons">${fastMoveIcon}  ${fastMove}</td>
           <td id="move-icons">${chargeMoveIcon}  ${chargeMove}</td>
-          <td>${DPS0}</td>
           <td>${DPS}</td>
+          <td>${TDO}</td>
           <td>${maxCP}</td>
      `;
      return row;
@@ -345,8 +298,8 @@ function createRow_Mega(mega, combo, parent) {
 
      let maxCP = calcMaxCP(mega);
 
-     let DPS0 = combo.DPS0;
      let DPS = combo.DPS;
+     let TDO = combo.TDO;
      
      let fastMove = combo.fastMove;
      let fastMoveIcon = getTypeIcon(combo.fastType);
@@ -361,8 +314,8 @@ function createRow_Mega(mega, combo, parent) {
           <td id="type-icons">${typeIcons}</td>
           <td id="move-icons">${fastMoveIcon}  ${fastMove}</td>
           <td id="move-icons">${chargeMoveIcon}  ${chargeMove}</td>
-          <td>${DPS0}</td>
           <td>${DPS}</td>
+          <td>${TDO}</td>
           <td>${maxCP}</td>
      `;
      
@@ -383,7 +336,7 @@ function fetchDataAndRender() {
                for (const pokeData in data) {
                     const pokemon = data[pokeData];
 
-                    const movesetData = calculateAllMoveCombosDPS(pokemon);
+                    const movesetData = calcAllMoveComboDPS(pokemon, false);
                     for (const combo of movesetData) {
                          const row = createRow(pokemon, combo);
                          if (!skippedNormals.includes(pokemon.names.English)) {
@@ -396,7 +349,7 @@ function fetchDataAndRender() {
                          Object.keys(pokemon.regionForms).forEach(regionKey => {
 
                               const variant = pokemon.regionForms[regionKey];
-                              const movesetData = calculateAllMoveCombosDPS(variant);
+                              const movesetData = calcAllMoveComboDPS(variant, false);
 
                               if (!weirdDatabaseIncludes.includes(regionKey) && variant.isReleased) {
                                    for (const combo of movesetData) {
@@ -412,7 +365,7 @@ function fetchDataAndRender() {
                          Object.keys(pokemon.megaEvolutions).forEach(megaKey => {
 
                               const mega = pokemon.megaEvolutions[megaKey];
-                              const movesetMegaData = calculateAllMoveCombosDPS_Mega(mega, pokemon);
+                              const movesetMegaData = calcAllMoveComboDPS_Mega(mega, pokemon);
 
                               if (!weirdDatabaseIncludes.includes(megaKey)) {
                                    for (const combo of movesetMegaData) {
