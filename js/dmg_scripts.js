@@ -4,9 +4,8 @@
 
 let activeType = null;
 let bestChecked = false;
-let sameMoveChecked = false;
-let shadowsChecked = false;
-let megasChecked = false;
+let shadowsChecked = true;
+let megasChecked = true;
 
 const COL_SPAN = 5;
 
@@ -196,22 +195,6 @@ function calcAllMoveComboDPS_Mega(mega, parent) {
 // ===============================================================================================
 // HELPER METHODS
 
-// function shouldInclude(pokemon) {
-//      if (activeType) {
-//           const type1 = pokemon.primaryType.names.English;
-//           const type2 = pokemon.secondaryType ? pokemon.secondaryType.names.English : "";
-//           if (type1 !== activeType && type2 !== activeType) return false;
-//      }
-
-//      if (bestChecked && !pokemon.names.English.includes("★")) return false;
-
-//      if (megasChecked && !pokemon.hasMegaEvolution) return false;
-
-//      if (shadowsChecked && !pokemon.hasShadow) return false;
-
-//      return true;
-// }
-
 function getPokemonIcon(id, gen) {
      return `<img src="images/sprites/gen${gen}/${id}.png" class="pokemon-icon" alt="${id}">`;
 }
@@ -329,11 +312,10 @@ function fetchDataAndRender() {
                tableBody.innerHTML = '';
 
                // Only include released pokemon
-               data = data.filter(pokemon => pokemon.isReleased);
+               data = data.filter(p => p.isReleased);
 
                for (const pokeData in data) {
                     const pokemon = data[pokeData];
-
                     const primaryType = pokemon.primaryType.names.English;
                     const secondaryType = pokemon.secondaryType ? pokemon.secondaryType.names.English : "";
                     
@@ -347,7 +329,7 @@ function fetchDataAndRender() {
                          }
 
                          // insert shadows
-                         if (pokemon.hasShadow) {
+                         if (pokemon.hasShadow && shadowsChecked) {
                               const movesetData = calcAllMoveComboDPS(pokemon, true);
                               for (const combo of movesetData) {
                                    const row = createRow(pokemon, combo, true);
@@ -363,12 +345,12 @@ function fetchDataAndRender() {
                          Object.keys(pokemon.regionForms).forEach(regionKey => {
 
                               const variant = pokemon.regionForms[regionKey];
-                              const movesetData = calcAllMoveComboDPS(variant, false);
-
                               const primaryType = variant.primaryType.names.English;
                               const secondaryType = variant.secondaryType ? variant.secondaryType.names.English : "";
 
                               if (activeType == null || activeType == primaryType || activeType == secondaryType) {
+
+                                   const movesetData = calcAllMoveComboDPS(variant, false);
 
                                    if (!weirdDatabaseIncludes.includes(regionKey) && variant.isReleased) {
                                         for (const combo of movesetData) {
@@ -377,7 +359,7 @@ function fetchDataAndRender() {
                                         }
 
                                         // insert shadows
-                                        if (variant.hasShadow) {
+                                        if (variant.hasShadow && shadowsChecked) {
                                              const movesetData = calcAllMoveComboDPS(variant, true);
                                              for (const combo of movesetData) {
                                                   const row = createRow(variant, combo, true);
@@ -392,16 +374,16 @@ function fetchDataAndRender() {
                     }
 
                     // insert megas
-                    if (pokemon.hasMegaEvolution) {
+                    if (pokemon.hasMegaEvolution && megasChecked) {
                          Object.keys(pokemon.megaEvolutions).forEach(megaKey => {
 
                               const mega = pokemon.megaEvolutions[megaKey];
-                              const movesetMegaData = calcAllMoveComboDPS_Mega(mega, pokemon);
-
                               const primaryType = mega.primaryType.names.English;
                               const secondaryType = mega.secondaryType ? mega.secondaryType.names.English : "";
 
                               if (activeType == null || activeType == primaryType || activeType == secondaryType) {
+
+                                   const movesetMegaData = calcAllMoveComboDPS_Mega(mega, pokemon);
 
                                    if (!weirdDatabaseIncludes.includes(megaKey)) {
                                         for (const combo of movesetMegaData) {
@@ -439,7 +421,7 @@ function renderTable() {
 
           fetchDataAndRender().then(function() {
                table.rows.add($('#dmgTable tbody tr')).draw();
-               setupFilterButtons(table);
+               setupFilterButtons();
           });
 
      }).catch(function(error) {
@@ -447,7 +429,7 @@ function renderTable() {
      });
 }
 
-function setupFilterButtons(table) {
+function setupFilterButtons() {
      $('.type-toggle').off('click').on('click', function () {
           const type = $(this).data('type');
 
@@ -459,26 +441,6 @@ function setupFilterButtons(table) {
                $('.type-toggle').removeClass('active-toggle');
                $(this).addClass('active-toggle');
           }
-          renderTable()
-     });
-
-     $('#best-checkbox').off('change').on('change', function () {
-          bestChecked = this.checked;
-          renderTable()
-     });
-
-     $('#same-type-checkbox').off('change').on('change', function () {
-          sameMoveChecked = this.checked;
-          renderTable()
-     });
-
-     $('#shadow-checkbox').off('change').on('change', function () {
-          shadowsChecked = this.checked;
-          renderTable()
-     });
-
-     $('#mega-checkbox').off('change').on('change', function () {
-          megasChecked = this.checked;
           renderTable()
      });
 }

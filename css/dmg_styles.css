@@ -127,15 +127,3 @@
 /* Fairy Type */
 .type-fairy        { background-color: #D685AD; }
 .type-fairy.active-toggle   { background-color: #b1688e; }
-
-#filter-checkboxes label {
-     font-size: 16px;
-     cursor: pointer;
-     user-select: none;
-}
-
-#filter-checkboxes input[type="checkbox"] {
-     margin-right: 6px;
-     transform: scale(1.2);
-     cursor: pointer;
-}
